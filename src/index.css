@@ -15,7 +15,7 @@ body{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   grid-auto-rows: auto;
-  gap: 24;
+  gap: 24px;
   padding: 40px;
 }
 
@@ -33,9 +33,44 @@ body{
 
 .articles-card, .credentials-cards, .profile-card, .technical-timeline-cards, .client-excellence-cards, 
 .toastmasters-card, .bookshelf-cards .contact-cards{
-    background-color: rgba(18, 19, 26, 0.5);
+    background: radial-gradient(
+    circle at 80% 30%,
+    rgb(39, 21, 130) 0%,
+    rgba(21, 28, 86, 0.605) 70%
+  );
     backdrop-filter: blur(12px);
-    border: solid 1px rgba(255, 255, 255, 0.05);
-    border-radius: 20%;
+    border: solid 1px rgb(103, 75, 113);
+    border-radius: 10%;
     padding: 20px;
+}
+
+/* Card Profile */
+/* Picture class */
+.profile-header{
+    display: inline;
+    
+}
+.profile-img{
+  width: 30%;
+  height: 50%;
+  padding: 20px;
+  border-radius: 20px; /* Gives it those smooth rounded corners */
+  
+  /* --- The Rainbow Border Magic --- */
+  border: 2px solid transparent; /* 1. Create a transparent border space */
+  background-image: 
+    linear-gradient(#0c0d14, #0c0d14), /* 2. Inner card background match */
+    linear-gradient(135deg, #a855f7 0%, #3b82f6 50%, #06b6d4 100%); /* 3. The Rainbow Gradient */
+  
+  background-origin: border-box; /* 4. Tells CSS to let the gradient stretch into the border area */
+  background-clip: padding-box, border-box; /* 5. Clips the dark background inside, leaving the border colorful */
+}
+.status-dot{
+    position: absolute;
+    bottom: 24px;
+    left: 100px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: green;
 }
