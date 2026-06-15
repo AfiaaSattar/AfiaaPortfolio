@@ -10,7 +10,7 @@ export default function ProfileCard(){
                 <span className="status-dot"></span>
             </div>
            </div>
-
+           
         </div>
     );
 }
