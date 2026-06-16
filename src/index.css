@@ -22,30 +22,30 @@ body{
   .dashboard-container{
   grid-template-columns: repeat(3, 1fr);
 }
-.profile-card { grid-column: 1; grid-row: span 1; }
+  .profile-card { grid-column: span 2; grid-row: span 1; }
   .credentials-cards { grid-column: 2; grid-row: span 1; }
   .articles-card { grid-column: 3; grid-row: span 2; }
 
   .technical-timeline-cards { grid-column: 1; grid-row: span 1; }
-  .client-excellence-cards { grid-column: 2; grid-row: span 2; }
+  .client-excellence-cards { grid-column: 2; grid-row: span 1; }
 
-  .toastmasters-card { grid-column: 1; }
+  .toastmasters-card { grid-column: 1; grid-row: span 2; }
   .bookshelf-cards { grid-column: 2; }
 
   .contact-cards { grid-column: 1 / -1; } /* يمتد بكامل العرض في الأسفل */
 }
 
-.profile-card{grid-column: 1; grid-row: span 1;}
-.credentials-cards{grid-column: 2; grid-row: span 1;}
-.articles-card{grid-column: 3; grid-row: span 2;}
+.profile-card{grid-column: span 2; grid-row: span 1;}
+.credentials-cards{grid-column: 3; grid-row: span 1;}
+.articles-card{grid-column: 4; grid-row: span 2;}
 
-.technical-timeline-cards{ grid-column: 1; grid-row: span 1;}
-.client-excellence-cards{ grid-column: 2; grid-row: span 2;}
+.technical-timeline-cards{ grid-column: span 2; grid-row: span 1;}
+.client-excellence-cards{ grid-column: 3; grid-row: span 2;}
 
-.toastmasters-card{grid-column: 1;}
-.bookshelf-cards{grid-column: 2;}
+.toastmasters-card{grid-column: span 3; grid-row: span 4;}
+.bookshelf-cards{grid-column: 4; grid-row: span 3;}
 
-.contact-cards{ grid-column: auto; }
+.contact-cards{ grid-column: 1 / -1; }
 
 .articles-card, .credentials-cards, .profile-card, .technical-timeline-cards, .client-excellence-cards, 
 .toastmasters-card, .bookshelf-cards, .contact-cards{
@@ -58,17 +58,22 @@ body{
     border: solid 1px rgb(103, 75, 113);
     border-radius: 10%;
     padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 /* Card Profile */
 /* Picture class */
 .profile-header{
-    display: inline;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 .avatar-wrapper{
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 90px;
+  height: 90px;
+  flex-shrink: 0;
 }
 .profile-img{
   width: 100%;
@@ -87,10 +92,29 @@ body{
 }
 .status-dot{
     position: absolute;
-    bottom: -13%;
-    right: -12%;
-    width: 15px;
-    height: 15px;
+    bottom: -8%;
+    right: -7%;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background-color: green;
+}
+.eyebrow-text{
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #a855f7; 
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.main-title{
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+}
+.profile-bio{
+  font-size: 15px;
+  line-height: 1.6;
+  color: #94a3b8; 
+  margin: 0;
 }

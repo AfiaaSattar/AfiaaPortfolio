@@ -5,6 +5,7 @@ import CredentialsCards from './components/CredentialsCard';
 import ProfileCard from './components/ProfileCard'; 
 import TechnicalTimelineCards from './components/TechnicalTimelineCards';
 import ToastmastersCard from './components/ToastmastersCards';
+import BookshelfCards from'./components/BookshelfCards'
 export default function App(){
 
   return(
@@ -15,6 +16,7 @@ export default function App(){
           <TechnicalTimelineCards />
           <ClientExcellenceCards />
           <ToastmastersCard />
+          <BookshelfCards />
           <ContactCards />
     </div>
   );
