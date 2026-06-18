@@ -1,5 +1,13 @@
 import personalPic from "../assets/react.svg";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import {
+  FaLinkedinIn,
+  FaGithub,
+  FaMediumM,
+  FaYoutube,
+  FaRegEnvelope,
+} from "react-icons/fa";
 
 const SKILLS_DATA = [
   { id: 1, name: "React", isHot: false },
@@ -8,6 +16,14 @@ const SKILLS_DATA = [
   { id: 4, name: "PHP", isHot: false },
   { id: 5, name: "MySQL", isHot: true },
   { id: 6, name: "REST API", isHot: true },
+];
+
+const SOCIAL_DATA = [
+  {id: "li", name: "LinkedIn",url: "#", icon: <FaLinkedinIn />, type: "linkedin" },
+  { id: "gh", name: "GitHub", url: "#", icon: <FaGithub />, type: "github" },
+  { id: "md", name: "Medium", url: "#", icon: <FaMediumM />, type: "medium" },
+  { id: "yt", name: "YouTube", url: "#", icon: <FaYoutube />, type: "youtube" },
+  {id: "em", name: "Email", url: "mailto:example@email.com", type: "email", icon: <FaRegEnvelope />},
 ];
 
 const SkillTag = styled.div`
@@ -23,7 +39,7 @@ const SkillTag = styled.div`
   font-family: "Inter", sans-serif;
   padding: 10px 10px;
   border-radius: 20px;
-  position: relative; /* 🌟 أساسية لكي تدور النقطة حول البطاقة نفسها كمركز */
+  position: relative;
 
   ${(props) =>
     props.$isHot &&
@@ -61,6 +77,37 @@ const SkillTag = styled.div`
   }
 `;
 
+const SocialButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  margin: 4px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+ 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+
+  color: ${props => {
+    if (props.$type === 'linkedin') return '#0077b5';
+    if (props.$type === 'github') return '#f0f6fc';
+    if (props.$type === 'medium') return '#00ab6c';
+    if (props.$type === 'youtube') return '#ff0000';
+    if (props.$type === 'email') return '#ea4335';
+    return '#c084fc';
+}};
+
+
+  &:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px #06b6d4, 0 0 20px #06b6d4;
+  }
+`;
+
+
 export default function ProfileCard() {
   return (
     <div className="profile-card">
@@ -79,11 +126,20 @@ export default function ProfileCard() {
         </div>
       </div>
 
-      {SKILLS_DATA.map(({ id, name, isHot }) => (
-        <SkillTag key={id} $isHot={isHot}>
-          {name}
-        </SkillTag>
-      ))}
+      <div>
+        {SKILLS_DATA.map(({ id, name, isHot }) => (
+          <SkillTag key={id} $isHot={isHot}>
+            {name}
+          </SkillTag>
+        ))}
+      </div>
+      <div>
+        {SOCIAL_DATA.map(({ id, name, url, icon, type }) => (
+          <SocialButton key={id} href={url} $type={type}>
+            {icon} {name}
+          </SocialButton>
+        ))}
+      </div>
     </div>
   );
 }
