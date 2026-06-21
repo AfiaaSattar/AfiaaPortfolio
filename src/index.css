@@ -18,9 +18,11 @@ body{
   gap: 24px;
   padding: 40px;
 }
+
+/* Screen Responsive*/
 @media (min-width :900px){
   .dashboard-container{
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
   .profile-card { grid-column: span 2; grid-row: span 1; }
   .credentials-cards { grid-column: 2; grid-row: span 1; }
@@ -47,6 +49,23 @@ body{
 
 .contact-cards{ grid-column: 1 / -1; }
 
+@media (max-width :900px){
+  .dashboard-container{
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;  
+}
+  .profile-card,
+  .credentials-cards,
+  .articles-card,
+  .technical-timeline-cards,
+  .client-excellence-cards,
+  .toastmasters-card,
+  .bookshelf-cards,
+  .contact-cards{
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
 .articles-card, .credentials-cards, .profile-card, .technical-timeline-cards, .client-excellence-cards, 
 .toastmasters-card, .bookshelf-cards, .contact-cards{
     background: radial-gradient(
@@ -56,7 +75,7 @@ body{
   );
     backdrop-filter: blur(12px);
     border: solid 1px rgb(103, 75, 113);
-    border-radius: 10%;
+    border-radius: 5%;
     padding: 20px;
     box-sizing: border-box;
     overflow: hidden;
@@ -107,10 +126,13 @@ body{
   font-weight: 600;
 }
 .main-title{
-  font-size: 36px;
+  font-size: 60px;
   font-weight: 800;
   margin: 0;
-  color: #ffffff;
+  background: linear-gradient(135deg, #f1eff3 0%, #1e72fa 50%, #155763 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .profile-bio{
   font-size: 15px;

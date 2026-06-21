@@ -42,8 +42,7 @@ const SkillTag = styled.div`
   position: relative;
 
   ${(props) =>
-    props.$isHot &&
-    `
+    props.$isHot &&`
     background: rgba(6, 182, 212, 0.05);
     border-color: #06b6d4;
     color: #06b6d4;
@@ -91,22 +90,39 @@ const SocialButton = styled.a`
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.2s ease;
 
-  color: ${props => {
-    if (props.$type === 'linkedin') return '#0077b5';
-    if (props.$type === 'github') return '#f0f6fc';
-    if (props.$type === 'medium') return '#00ab6c';
-    if (props.$type === 'youtube') return '#ff0000';
-    if (props.$type === 'email') return '#ea4335';
-    return '#c084fc';
-}};
+  ${props => {
+    let mainColor = '#c084fc';
 
+    if (props.$type === 'linkedin') mainColor = '#0077b5';
+    if (props.$type === 'github') mainColor =  '#f0f6fc';
+    if (props.$type === 'medium') mainColor =  '#00ab6c';
+    if (props.$type === 'youtube') mainColor = '#ff0000';
+    if (props.$type === 'email') mainColor =  '#ea4335';
+    
+    return `
+    color: ${mainColor};
+    border-color: ${mainColor}66;
+    `;
+}};
 
   &:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 10px #06b6d4, 0 0 20px #06b6d4;
+  
+  ${props => {
+    let mainColor = '#c084fc';
+
+    if (props.$type === 'linkedin') mainColor = '#0077b5';
+    if (props.$type === 'github') mainColor =  '#f0f6fc';
+    if (props.$type === 'medium') mainColor =  '#00ab6c';
+    if (props.$type === 'youtube') mainColor = '#ff0000';
+    if (props.$type === 'email') mainColor =  '#ea4335';
+
+    return`
+        box-shadow: 0 0 30px ${mainColor}60;
+    `
+  }}
   }
 `;
-
 
 export default function ProfileCard() {
   return (
