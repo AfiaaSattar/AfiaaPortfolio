@@ -140,3 +140,25 @@ body{
   color: #94a3b8; 
   margin: 0;
 }
+/*Credentials Card*/
+/*credentials-header*/
+
+.credentials-header{
+  display: flex;
+  justify-content: space-between;
+ align-items: center;
+ width: 100%;
+}
+.credentials-left-side{  
+ display: flex;
+ align-items: center;
+ gap:30px;
+}
+.credentials-text-box{
+display: flex;
+flex-direction: column;
+}
+
+.credentials-right-side{
+color: #ffffff;
+}

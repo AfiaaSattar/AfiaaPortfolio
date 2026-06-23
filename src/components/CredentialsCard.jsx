@@ -6,8 +6,10 @@ export default function CredentialsCards(){
             <div className="credentials-header">
                 <div className="credentials-left-side">
                     < FaRegEnvelope />
-                    <h4>credentials</h4>
-                    <span>Certifications & Awards</span>
+                    <div className="credentials-text-box">
+                        <h4>credentials</h4>
+                        <span>Certifications & Awards</span>
+                    </div>
                 </div>   
                <div className="credentials-right-side">
                     <span> 42 total</span>
