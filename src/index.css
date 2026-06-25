@@ -8,7 +8,8 @@ body{
     rgba(2, 7, 47, 0.989) 70%
   );
   background-attachment: fixed;
-  font-family: 'Inter', sans-serif; 
+font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
   color: #ffffff;
 }
 .dashboard-container{
@@ -76,7 +77,7 @@ body{
     backdrop-filter: blur(12px);
     border: solid 1px rgb(103, 75, 113);
     border-radius: 5%;
-    padding: 20px;
+    padding: 15px;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -140,25 +141,55 @@ body{
   color: #94a3b8; 
   margin: 0;
 }
+
+
 /*Credentials Card*/
 /*credentials-header*/
-
 .credentials-header{
   display: flex;
   justify-content: space-between;
- align-items: center;
- width: 100%;
+  align-items: center;
+  width: 100%;
 }
 .credentials-left-side{  
  display: flex;
  align-items: center;
- gap:30px;
+ gap:15px;
+}
+.fiAwardClass{
+width: 20px;
+height: 20px;
+padding: 9px;
+border: 1px solid ;
+border-radius: 10px;
+color: #c084fc;
+box-shadow: 0 0 5px #c084fc, 0 0 10px #c084fc;
 }
 .credentials-text-box{
 display: flex;
 flex-direction: column;
 }
-
+.credentials-text-box h4{
+color: #ffffff;
+  margin: 0;
+  font-size: 19px;
+font-family: 'Inter', sans-serif;
+  font-weight: 600; /* ليعطيكِ نفس سماكة كلمة Credentials تماماً */
+  letter-spacing: -0.02em;
+}
+.credentials-text-box span{
+color: #64748b;
+  font-size: 13px;
+}
 .credentials-right-side{
 color: #ffffff;
+}
+.credentials-right-side span{
+width: 20px;
+height: 20px;
+padding: 9px;
+border: 1px solid ;
+border-radius: 10px;
+color: #c084fc;
+box-shadow: 0 0 5px #c084fc, 0 0 10px #c084fc; 
 }
