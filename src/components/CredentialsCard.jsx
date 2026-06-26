@@ -1,5 +1,6 @@
 
 import { FiAward } from "react-icons/fi";
+import toefl from "../assets/toefl.PNG";
 export default function CredentialsCards(){
     return(
         <div className="credentials-cards">
@@ -14,6 +15,16 @@ export default function CredentialsCards(){
                <div className="credentials-right-side">
                     <span> 42 total</span>
                </div>        
+            </div>
+
+            <div className="Featured-Certificate">
+                <img src={toefl} />
+                 <div className="Featured-Certificate-text">
+                    <span> Featured Certificate </span>
+                    <h3>Meta Advanced React</h3>
+                    <span>Meta Platforms · Issued 2026</span>
+                 </div>
+                 <span className="verified">Verified</span>
             </div>
         </div>
     );

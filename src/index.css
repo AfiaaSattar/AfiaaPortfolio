@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 body{
   margin: 0;
   padding: 0;
@@ -76,7 +77,7 @@ font-family: 'Inter', sans-serif;
   );
     backdrop-filter: blur(12px);
     border: solid 1px rgb(103, 75, 113);
-    border-radius: 5%;
+    border-radius: 20px;
     padding: 15px;
     box-sizing: border-box;
     overflow: hidden;
@@ -142,7 +143,6 @@ font-family: 'Inter', sans-serif;
   margin: 0;
 }
 
-
 /*Credentials Card*/
 /*credentials-header*/
 .credentials-header{
@@ -160,6 +160,7 @@ font-family: 'Inter', sans-serif;
 width: 20px;
 height: 20px;
 padding: 9px;
+margin-top: 5px;
 border: 1px solid ;
 border-radius: 10px;
 color: #c084fc;
@@ -169,16 +170,16 @@ box-shadow: 0 0 5px #c084fc, 0 0 10px #c084fc;
 display: flex;
 flex-direction: column;
 }
-.credentials-text-box h4{
-color: #ffffff;
-  margin: 0;
+.credentials-text-box h3{
+  color: #ffffff;
+  margin: 5px 0px;
   font-size: 19px;
-font-family: 'Inter', sans-serif;
-  font-weight: 600; /* ليعطيكِ نفس سماكة كلمة Credentials تماماً */
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 600;
   letter-spacing: -0.02em;
 }
 .credentials-text-box span{
-color: #64748b;
+  color: #64748b;
   font-size: 13px;
 }
 .credentials-right-side{
@@ -187,9 +188,51 @@ color: #ffffff;
 .credentials-right-side span{
 width: 20px;
 height: 20px;
-padding: 9px;
+padding: 5px;
 border: 1px solid ;
-border-radius: 10px;
+border-radius: 20px;
 color: #c084fc;
+font-size: 10px;
 box-shadow: 0 0 5px #c084fc, 0 0 10px #c084fc; 
+}
+
+/*Featured Certificate*/
+
+.Featured-Certificate{
+display: flex;
+justify-content: flex-start;
+align-items: center;
+margin: 20px;
+gap: 15px;
+width: 300px;
+}
+.Featured-Certificate img{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 0 5px #c084fc, 0 0 10px #c084fc; 
+}
+.Featured-Certificate-text {
+  display: flex;
+  flex-direction: column;
+  gap:4px;
+  flex-grow: 0;
+  width: auto;
+}
+.Featured-Certificate-text span{
+font-size: 13px;
+margin: 0px;
+}
+.verified{
+text-align: center;
+width: 50px;
+height: 10px;
+padding: 10px;
+border: 1px solid ;
+border-radius: 15px;
+color: #17a856;
+font-size: 10px;
+box-shadow: 0 0 5px #17a856, 0 0 10px #209f31; 
 }

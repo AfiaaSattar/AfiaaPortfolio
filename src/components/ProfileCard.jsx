@@ -1,13 +1,7 @@
 import personalPic from "../assets/react.svg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import {
-  FaLinkedinIn,
-  FaGithub,
-  FaMediumM,
-  FaYoutube,
-  FaRegEnvelope,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaMediumM, FaYoutube, FaRegEnvelope } from "react-icons/fa";
 
 const SKILLS_DATA = [
   { id: 1, name: "React", isHot: false },
