@@ -16,12 +16,12 @@ export default function CredentialsCards(){
                     <span> 42 total</span>
                </div>        
             </div>
-
+            {/* The body of the credentials-cards */}
             <div className="Featured-Certificate">
                 <img src={toefl} />
                  <div className="Featured-Certificate-text">
                     <span> Featured Certificate </span>
-                    <h3>Meta Advanced React</h3>
+                    <h4>Meta Advanced React</h4>
                     <span>Meta Platforms · Issued 2026</span>
                  </div>
                  <span className="verified">Verified</span>
