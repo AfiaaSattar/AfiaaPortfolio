@@ -26,6 +26,21 @@ export default function CredentialsCards(){
                  </div>
                  <span className="verified">Verified</span>
             </div>
+            {/* Footer of the Featured-Certificate */}
+            <div className="Featured-Certificate-footer">
+                <div className="dev">
+                    <span>+17</span>
+                    <p>Dev</p>
+                </div>
+                <div className="leaderShip">
+                    <span>+10</span>
+                    <p>LeaderShip</p>
+                </div>
+                <div className="tech">
+                    <span>+15</span>
+                    <p>Tech</p>
+                </div>
+            </div>
         </div>
     );
 }
