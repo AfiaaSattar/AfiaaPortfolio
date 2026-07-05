@@ -41,6 +41,10 @@ export default function CredentialsCards(){
                     <p>Tech</p>
                 </div>
             </div>
+            {/*View All Credentials*/}
+            <div className="credentials-button">
+                 <button>View All Credentials</button>
+            </div>
         </div>
     );
 }

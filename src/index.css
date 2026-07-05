@@ -320,3 +320,18 @@ align-items: center;
   margin: 3px;
   text-align: center;
 }
+.credentials-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.credentials-button button{
+margin: 20px;
+height: 50px;
+width: 500px;
+border-radius: 40px;
+border: 1px solid rgb(120, 64, 155);
+color: #ffffff;
+font-weight: 400;
+background-color: ;
+}
