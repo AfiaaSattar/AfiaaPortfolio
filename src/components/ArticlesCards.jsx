@@ -1,4 +1,5 @@
 import { IoMdBook } from "react-icons/io";
+import { CiCalendar } from "react-icons/ci";
 export default function ArticlesCards(){
     return(
         <div className="articles-card">
@@ -28,13 +29,41 @@ export default function ArticlesCards(){
                 kja lkfj lkaj sfklj ksfj klj skafj jj flkajflkjsjf 
             </p>
             <div className="articles-body-footer">
-                <span> May 18,2026</span>
+                <span> <CiCalendar /> May 18,2026</span>
+            </div>
+        </div>
+
+        <div className="articles-body"> 
+            <div className="articles-body-header">
+                <span>Medium</span>
+                <span>8 min read</span>
+            </div>
+            <h5>Mastering WordPress Security: A Complete Guide</h5>
+            <p>h ahiuahfuia uihaukhf hkja hkjf h ahfah jkhfa jkhfa
+                kja lkfj lkaj sfklj ksfj klj skafj jj flkajflkjsjf 
+            </p>
+            <div className="articles-body-footer">
+                <span> <CiCalendar /> May 18,2026</span>
+            </div>
+        </div>
+
+        <div className="articles-body"> 
+            <div className="articles-body-header">
+                <span>Medium</span>
+                <span>8 min read</span>
+            </div>
+            <h5>Mastering WordPress Security: A Complete Guide</h5>
+            <p>h ahiuahfuia uihaukhf hkja hkjf h ahfah jkhfa jkhfa
+                kja lkfj lkaj sfklj ksfj klj skafj jj flkajflkjsjf 
+            </p>
+            <div className="articles-body-footer">
+                <span> <CiCalendar /> May 18,2026</span>
             </div>
         </div>
 
         {/*View All Credentials*/}
             <div className="articles-button">
-               <button>View All Credentials</button>
+               <button>View All on Medium</button>
             </div>
         </div>
     );

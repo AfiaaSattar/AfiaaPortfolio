@@ -15,6 +15,7 @@ font-family: 'Inter', sans-serif;
 }
 .dashboard-container{
   display: grid;
+  align-items: start;
   grid-template-columns: repeat(auto-fit, minmax(600px,1fr));
   grid-auto-rows: auto;
   gap: 24px;
@@ -39,7 +40,7 @@ font-family: 'Inter', sans-serif;
   .contact-cards { grid-column: 1 / -1; } /* يمتد بكامل العرض في الأسفل */
 }
 
-.profile-card{grid-column: span 2; grid-row: span 1;}
+.profile-card{grid-column: span 2; grid-row: span 1; }
 .credentials-cards{grid-column: 3; grid-row: span 1;}
 .articles-card{grid-column: 4; grid-row: span 2;}
 
@@ -328,7 +329,7 @@ background-color: rgb(64, 87, 155);
 }
 /*articles Card*/
 /*articles-header*/
-.articles-cards{
+.articles-card{
   align-items: center;
   justify-content: center;
 }
@@ -409,24 +410,41 @@ background:
   background-color: #17a8563f;
 }
 .articles-body-header span:nth-of-type(2){
-  padding: 3px 15px;
+  padding: 3px 5px;
   color: #64748b;
 }
-.articles-body-footer{
-
+.articles-body h5{
+  padding: 0px 10px;
+  margin: 0px;
+}
+.articles-body p{
+  padding: 0px 10px;
+  color: #64748b;
+  margin-top: 8px;
+}
+.articles-body-footer {
+text-align: right;
+ color: #64748b;
+ margin:10px  20px;
+}
+.articles-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .articles-button button{
+justify-content: center;
 margin: 20px;
 height: 50px;
 width: 100%;
 max-width: 500px;
-border-radius: 40px;
-border: 1px solid rgb(120, 64, 155);
-color: #ffffff;
+border-radius: 15px;
+border: 1px solid #1ac66d5f;
+color: #1ac66d;
 font-weight: 400;
-background-color: rgb(64, 87, 155);
+background-color: #1ac66d2a;
 }
 .articles-button button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px #4e36d38f, 0 0 10px #11457d; 
+  box-shadow: 0 0 30px #1ac66d, 0 0 10px #1ac66d; 
 }
