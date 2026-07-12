@@ -1,4 +1,3 @@
-
 import { FiAward } from "react-icons/fi";
 import toefl from "../assets/toefl.PNG";
 export default function CredentialsCards(){
