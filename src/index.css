@@ -452,3 +452,60 @@ background-color: #1ac66d2a;
   transform: scale(1.05);
   box-shadow: 0 0 30px #1ac66d, 0 0 10px #1ac66d; 
 }
+/*TechnicalTimelineCards Card*/
+/*TechnicalTimelineCards-header*/
+.technical-card{
+  align-items: center;
+  justify-content: center;
+}
+.technical-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.technical-left-side{  
+ display: flex;
+ align-items: center;
+ gap:15px;
+}
+.bsFillBuildingsFill{
+width: 20px;
+height: 20px;
+padding: 9px;
+margin-top: 5px;
+border: 1px solid ;
+border-radius: 10px;
+color: #412fe7f4;
+box-shadow: 0 0 10px #412fe7f4, 0 0 2px #412fe7f4;
+background-color: #06b5d427;
+}
+.technical-text-box{
+display: flex;
+flex-direction: column;
+}
+.technical-text-box h3{
+  color: #ffffff;
+  margin: 5px 0px;
+  font-size: 19px;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.technical-text-box span{
+  color: #64748b;
+  font-size: 13px;
+}
+.technical-right-side{
+color: #ffffff;
+}
+.technical-right-side span{
+width: 20px;
+height: 20px;
+padding: 5px;
+border: 1px solid ;
+border-radius: 20px;
+color: #1ac66d;
+font-size: 10px;
+box-shadow: 0 0 5px #1ac66d, 0 0 10px #1ac66d; 
+}
