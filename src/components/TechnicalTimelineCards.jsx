@@ -1,10 +1,13 @@
 import { BsFillBuildingsFill } from "react-icons/bs";
+import { AiOutlineGlobal } from "react-icons/ai";
+import { GrTechnology } from "react-icons/gr";
+import styled from "styled-components";
 export default function TechnicalTimelineCards(){
     const technicalExperience = [
        {
         id: 1,
-        icon: "</>",
-        title: "IT Technical Assistant",
+        icon: <GrTechnology />,
+        title: " IT Technical Assistant",
         situation: "CURRENT",
         workPlace: "University of Technology",
         date: "2022 – Present",
@@ -14,8 +17,8 @@ export default function TechnicalTimelineCards(){
        },
        {
         id: 2,
-        icon: "</>",
-        title: "Website Unit Head",
+        icon: <AiOutlineGlobal />,
+        title: " Website Unit Head",
         situation: "ACTIVE",
         workPlace: "University of Technology",
         date: "Jan 2026 – Present",
@@ -26,7 +29,7 @@ export default function TechnicalTimelineCards(){
        {
         id: 3,
         icon: "</>",
-        title: "Frontend Developer",
+        title: " Frontend Developer",
         situation: "SELF-TAUGHT",
         workPlace: "Independent — this portfolio is proof",
         date: "2022 – Present",
@@ -35,6 +38,33 @@ export default function TechnicalTimelineCards(){
         themeColor: "green"
        },
     ]
+    const Situation = styled.p`
+        background-color: #17a8562e;
+        border-radius: 10px;
+        border: 1px solid #17a856;
+        width: fit-content;
+        height: fit-content;  
+        padding:  5px 10px;
+        font-size: 13px;
+    `
+    const WorkPlace = styled.p`
+    color: #4578ae;
+    margin: 0px;
+    font-size: 15px;
+    `
+    const Datex = styled.p`
+    color: #64748b;
+    margin-top: 7px;
+    font-size: 15px;
+    `
+    const Description = styled.p`
+    color: #8091a8;
+    margin-top: 7px;
+    font-size: 15px;
+    `
+    const Tags = styled.p`
+  
+    `
     return(
         <div className="technical-timeline-cards">
             {/*atechnical-timeline-header*/}
@@ -51,19 +81,24 @@ export default function TechnicalTimelineCards(){
                 </div> 
               </div>  
             {/*technical-timeline-body*/}
-         
+
                 {technicalExperience.map((item) => 
                    <div className="technical-body" key={item.id}>
-                    <span>{item.icon}</span>
+                    <span className="icon">{item.icon}</span>
                     <span>{item.title}</span>
-                    <p>{item.situation}</p>
-                    <p>{item.workPlace}</p>
-                    <p>{item.date}</p>
-                    <p>{item.description}</p>
-                    <p>{item.tags}</p>
+                    <Situation>{item.situation}</Situation>
+                    <WorkPlace>{item.workPlace}</WorkPlace>
+                    <Datex>{item.date}</Datex>
+                    <Description>{item.description}</Description>
+                    <div className="tags-container">
+                        {item.tags.map((tag,index) => (
+                            <span key={index} className="custom-tag">
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
                    </div> 
-                )}
-                      
+                )}             
         </div>
     );
 }

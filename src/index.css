@@ -513,6 +513,7 @@ box-shadow: 0 0 5px #1ac66d, 0 0 10px #1ac66d;
 .technical-body{
 border-radius: 15px;
 border: 1px solid #31b7717d;
+padding: 30px;
 margin-top: 20px;
 background: 
   radial-gradient(
@@ -522,3 +523,23 @@ background:
   ),
   #033f301a;
 }
+/*technical-tags*/
+.icon{
+  color: #17a856;
+}
+.tags-container{
+ display: flex;
+ gap: 7px;
+}
+.custom-tag{
+  display: flex;
+  border: 1px solid #31b7717d;
+  border-radius: 16px;
+  padding: 9px;
+  width: fit-content;
+  height: fit-content;
+  color: #31b772fa;
+  background-color: #31b77236;
+  font-size: small;
+}
+ 
