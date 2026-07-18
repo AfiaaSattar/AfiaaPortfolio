@@ -32,7 +32,7 @@ font-family: 'Inter', sans-serif;
   .articles-card { grid-column: 3; grid-row: span 2; }
 
   .technical-timeline-cards { grid-column: 1; grid-row: span 1; }
-  .client-excellence-cards { grid-column: 2; grid-row: span 1; }
+  .professional-experience { grid-column: 2; grid-row: span 1; }
 
   .toastmasters-card { grid-column: 1; grid-row: span 2; }
   .bookshelf-cards { grid-column: 2; }
@@ -45,7 +45,7 @@ font-family: 'Inter', sans-serif;
 .articles-card{grid-column: 4; grid-row: span 2;}
 
 .technical-timeline-cards{ grid-column: span 2; grid-row: span 1;}
-.client-excellence-cards{ grid-column: 3; grid-row: span 2;}
+.professional-experience{ grid-column: 3; grid-row: span 2;}
 
 .toastmasters-card{grid-column: span 3; grid-row: span 4;}
 .bookshelf-cards{grid-column: 4; grid-row: span 3;}
@@ -61,7 +61,7 @@ font-family: 'Inter', sans-serif;
   .credentials-cards,
   .articles-card,
   .technical-timeline-cards,
-  .client-excellence-cards,
+  .professional-experience,
   .toastmasters-card,
   .bookshelf-cards,
   .contact-cards{
@@ -69,7 +69,7 @@ font-family: 'Inter', sans-serif;
     grid-row: span 1;
   }
 }
-.articles-card, .credentials-cards, .profile-card, .technical-timeline-cards, .client-excellence-cards, 
+.articles-card, .credentials-cards, .profile-card, .technical-timeline-cards, .professional-experience, 
 .toastmasters-card, .bookshelf-cards, .contact-cards{
     background: radial-gradient(
     circle at 80% 30%,

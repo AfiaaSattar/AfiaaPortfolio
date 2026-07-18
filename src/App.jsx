@@ -1,5 +1,5 @@
 import ArticlesCards from './components/ArticlesCards';
-import ClientExcellenceCards from './components/ClientExcellenceCards';
+import ProfessionalExperience from './components/ProfessionalExperience';
 import ContactCards from './components/contactCards';
 import CredentialsCards from './components/CredentialsCard';
 import ProfileCard from './components/ProfileCard'; 
@@ -14,7 +14,7 @@ export default function App(){
           <CredentialsCards />
           <ArticlesCards />
           <TechnicalTimelineCards />
-          <ClientExcellenceCards />
+          <ProfessionalExperience />
           <ToastmastersCard />
           <BookshelfCards />
           <ContactCards />
