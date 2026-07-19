@@ -58,9 +58,13 @@ export default function ProfessionalExperience(){
             
                 {zainPositions.map((item) => (
                     <div key={item.id} className="position-container" >
+                      <div>
                         <span>{item.icon}</span>
+                      </div> 
+                      <div>
                         <span>{item.title}</span>
                         <div>{item.date}</div>
+                       </div> 
                     </div>
                 ))}
         
@@ -70,9 +74,13 @@ export default function ProfessionalExperience(){
             </div>
                {IPPositions.map((item) => (
                     <div key={item.id} className="position-container" >
+                       <div>
                         <span>{item.icon}</span>
+                       </div>
+                       <div> 
                         <span>{item.title}</span>
                         <div>{item.date}</div>
+                      </div>
                     </div>
                 ))}
             <br />

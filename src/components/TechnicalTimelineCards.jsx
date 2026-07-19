@@ -11,8 +11,13 @@ export default function TechnicalTimelineCards(){
         situation: "CURRENT",
         workPlace: "University of Technology",
         date: "2022 – Present",
-        description: "Providing technical support, maintaining university systems, and managing IT infrastructure across departments.",
-        tags: ["React", "JavaScript", "CSS"],
+        description: "Providing support to faculty and administrative staff, troubleshooting computer-related issues, managing digital documents and data, creating reports and spreadsheets, and assisting with day-to-day technology needs across departments.",
+        tags: [
+            "Technical Support",
+            "Microsoft Office",
+            "IT Administration",
+            "Problem Solving"
+        ],
         themeColor: "green"
        },
        {
@@ -22,8 +27,14 @@ export default function TechnicalTimelineCards(){
         situation: "ACTIVE",
         workPlace: "University of Technology",
         date: "Jan 2026 – Present",
-        description: "Leading the university's official web presence — managing, designing, and publishing content on the WordPress platform.",
-        tags: ["React", "JavaScript", "CSS"],
+        description:  "Leading the university website by managing WordPress content, publishing updates, coordinating website improvements, and ensuring accurate and timely online communication.",
+        tags:[
+        "WordPress",
+        "Content Management",
+        "Website Administration",
+        "HTML",
+        "Digital Content"
+        ],
         themeColor: "green"
        },
        {
@@ -84,19 +95,23 @@ export default function TechnicalTimelineCards(){
 
                 {technicalExperience.map((item) => 
                    <div className="technical-body" key={item.id}>
-                    <span className="icon">{item.icon}</span>
-                    <span>{item.title}</span>
-                    <Situation>{item.situation}</Situation>
-                    <WorkPlace>{item.workPlace}</WorkPlace>
-                    <Datex>{item.date}</Datex>
-                    <Description>{item.description}</Description>
-                    <div className="tags-container">
-                        {item.tags.map((tag,index) => (
-                            <span key={index} className="custom-tag">
-                                {tag}
-                            </span>
-                        ))}
+                    <div>
+                      <span className="icon">{item.icon}</span>
                     </div>
+                     <div>
+                        <span>{item.title}</span>
+                        <Situation>{item.situation}</Situation>
+                        <WorkPlace>{item.workPlace}</WorkPlace>
+                        <Datex>{item.date}</Datex>
+                        <Description>{item.description}</Description>
+                        <div className="tags-container">
+                            {item.tags.map((tag,index) => (
+                                <span key={index} className="custom-tag">
+                                    {tag}
+                                </span>
+                            ))}
+                       </div>
+                     </div>
                    </div> 
                 )}             
         </div>
