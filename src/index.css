@@ -699,3 +699,35 @@ color: #1ac66d;
 font-size: 10px;
 box-shadow: 0 0 5px #1ac66d, 0 0 10px #1ac66d; 
 }
+
+/*toast-position-container*/
+.toast-position-container{
+  border-radius: 15px;
+  border: 1px solid #31b7717d;
+  padding: 30px;
+  margin-top: 20px;
+  background: 
+  radial-gradient(
+    circle at 20% 20%,           
+    rgba(111, 185, 140, 0.12) 0%,  
+    transparent 60%    
+  ),
+  #033f301a;
+}
+.toast-position-container p{
+  color: #64748b;
+  margin-bottom: 7px;
+}
+.club-name{
+  color: #64748b;
+}
+/*View Full Toastmasters Journey button*/
+.toast-button-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.toast-button{
+
+}

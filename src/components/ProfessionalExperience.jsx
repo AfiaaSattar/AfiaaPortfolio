@@ -86,6 +86,7 @@ export default function ProfessionalExperience(){
             <br />
             <hr />
             <br />
+            
             <div className="Featured-Certificate-footer">
                 <div className="dev">
                     <span>2019</span>
