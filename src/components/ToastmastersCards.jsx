@@ -86,7 +86,7 @@ export default function ToastmastersCard(){
 
               {/*Toastmasters-footer-button*/}   
                 <div className="toast-button-wrapper">
-                   <button className="toast-button">View Full Toastmasters Journey</button> 
+                   <button>View Full Toastmasters Journey</button> 
                 </div>
         </div>
     );
