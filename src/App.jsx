@@ -1,6 +1,6 @@
 import ArticlesCards from './components/ArticlesCards';
 import ProfessionalExperience from './components/ProfessionalExperience';
-import ContactCards from './components/contactCards';
+import ContactCards from "./components/ContactCards";
 import CredentialsCards from './components/CredentialsCard';
 import ProfileCard from './components/ProfileCard'; 
 import TechnicalTimelineCards from './components/TechnicalTimelineCards';
