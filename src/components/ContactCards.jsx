@@ -17,7 +17,6 @@ export default function ContactCards() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
-    // Add your submit logic / API call here
   };
 
   return (
