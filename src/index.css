@@ -3,7 +3,7 @@ body{
   margin: 0;
   padding: 0;
   min-height: 100vh;
- background:
+  background:
     /* Top Left - Cyan */
     radial-gradient(
       circle at 10% 15%,
@@ -40,12 +40,12 @@ body{
       #111827 100%
     );
 
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+background-attachment: fixed;
+background-repeat: no-repeat;
+min-height: 100vh;
 font-family: 'Inter', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  color: #ffffff;
+-webkit-font-smoothing: antialiased;
+color: #ffffff;
 }
 .dashboard-container{
   display: grid;
@@ -86,7 +86,7 @@ font-family: 'Inter', sans-serif;
 
 .contact-cards{ grid-column: 1 / -1; }
 
-@media (max-width :900px){
+@media (max-width :1000px){
   .dashboard-container{
   grid-template-columns: repeat(1, 1fr);
   gap: 16px;  
@@ -103,21 +103,54 @@ font-family: 'Inter', sans-serif;
     grid-row: span 1;
   }
 }
-.articles-card, .credentials-cards, .profile-card, .technical-timeline-cards, .professional-experience, 
-.toastmasters-card, .bookshelf-cards, .contact-cards{
-    background: radial-gradient(
-    circle at 80% 30%,
-    rgb(39, 21, 130) 0%,
-    rgba(21, 28, 86, 0.605) 70%
-  );
-    backdrop-filter: blur(12px);
-    border: solid 1px rgb(103, 75, 113);
-    border-radius: 20px;
-    padding: 15px;
-    box-sizing: border-box;
-    overflow: hidden;
-}
+.articles-card,
+.credentials-cards,
+.profile-card,
+.technical-timeline-cards,
+.professional-experience,
+.toastmasters-card,
+.bookshelf-cards,
+.contact-cards {
 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    background: rgba(15, 23, 42, 0.75);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 20px;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease,
+                background 0.35s ease;
+}
+.articles-card:hover,
+.credentials-cards:hover,
+.profile-card:hover,
+.technical-timeline-cards:hover,
+.professional-experience:hover,
+.toastmasters-card:hover,
+.bookshelf-cards:hover,
+.contact-cards:hover {
+
+  transform: translateY(-6px);
+  border-color: rgba(34, 211, 238, 0.35);
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow:
+      0 20px 45px rgba(0, 0, 0, 0.45),
+      0 0 25px rgba(34, 211, 238, 0.08);
+  transition: all 0.35s ease;
+}
 /* Card Profile */
 /* Picture class */
 .profile-header{
@@ -132,17 +165,13 @@ font-family: 'Inter', sans-serif;
   flex-shrink: 0;
 }
 .profile-img{
-  width: 100%;
-  height: 100%;
+  width: 170%;
+  height: 300%;
   object-fit: cover;
   border-radius: 10px; /* Gives it those smooth rounded corners */
-  
+
   /* --- The Rainbow Border Magic --- */
   border: 2px solid transparent; /* 1. Create a transparent border space */
-  background-image: 
-    linear-gradient(#0c0d14, #0c0d14), /* 2. Inner card background match */
-    linear-gradient(135deg, #a855f7 0%, #3b82f6 50%, #06b6d4 100%); /* 3. The Rainbow Gradient */
-  
   background-origin: border-box; /* 4. Tells CSS to let the gradient stretch into the border area */
   background-clip: padding-box, border-box; /* 5. Clips the dark background inside, leaving the border colorful */
 }

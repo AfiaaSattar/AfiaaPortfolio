@@ -1,4 +1,4 @@
-import personalPic from "../assets/react.svg";
+import personalPic from "../assets/afiaa.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FaLinkedinIn, FaGithub, FaMediumM, FaYoutube, FaRegEnvelope } from "react-icons/fa";
