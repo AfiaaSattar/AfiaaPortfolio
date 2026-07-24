@@ -3,12 +3,46 @@ body{
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: radial-gradient(
-    circle at 10% 30%,
-    rgb(18, 0, 107) 0%,
-    rgba(2, 7, 47, 0.989) 70%
-  );
+ background:
+    /* Top Left - Cyan */
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(34, 211, 238, 0.12) 0%,
+      transparent 35%
+    ),
+
+    /* Top Right - Emerald */
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(16, 185, 129, 0.10) 0%,
+      transparent 35%
+    ),
+
+    /* Bottom Center - Purple */
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(139, 92, 246, 0.10) 0%,
+      transparent 40%
+    ),
+
+    /* Bottom Left - Blue */
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(59, 130, 246, 0.08) 0%,
+      transparent 35%
+    ),
+
+    /* Base */
+    linear-gradient(
+      180deg,
+      #020617 0%,
+      #0B1220 45%,
+      #111827 100%
+    );
+
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #ffffff;
