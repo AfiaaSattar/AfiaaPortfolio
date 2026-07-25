@@ -1,8 +1,14 @@
 import { PiBuildingApartmentDuotone } from "react-icons/pi";
-import styled from "styled-components";
 import { GrTechnology } from "react-icons/gr";
 import { HiUsers } from "react-icons/hi2";
 import { IoCall } from "react-icons/io5";
+import {
+  CardHeader,
+  CardLeftSide,
+  CardRightSide,
+  CardTextBox,
+} from "../styled/CardHeader.js";
+
 
 export default function ProfessionalExperience(){
     const zainPositions = [
@@ -37,18 +43,18 @@ export default function ProfessionalExperience(){
     return(
         <div className="professional-experience">
             {/*professional-experience-header*/}
-            <div className="professional-experience-header">
-                <div className="professional-experience-left-side">
-                    <PiBuildingApartmentDuotone className="fiAwardClass"/>
-                    <div className="professional-experience-text-box">
-                        <h3>Professional Experience</h3>
-                        <span>Sales · B2B · IT Support</span>
-                    </div>
-                </div>   
-                <div className="professional-experience-right-side">
+            <CardHeader>
+                <CardLeftSide>
+                    <PiBuildingApartmentDuotone className="headerTag" />
+                    <CardTextBox>
+                        <h3 className="card-title">Professional Experience</h3>
+                        <span className="card-text">Sales · B2B · IT Support</span>
+                    </CardTextBox>
+                </CardLeftSide>   
+                <CardRightSide>
                     <span>5+ yrs</span>
-                </div>        
-            </div>
+                </CardRightSide>      
+            </CardHeader>
              {/*job containers*/}
             <div className="A">
                 <span className="B">Z</span>

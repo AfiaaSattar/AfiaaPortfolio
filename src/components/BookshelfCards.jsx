@@ -1,4 +1,11 @@
 import { FaBookOpen, FaCheckCircle } from "react-icons/fa";
+import {
+  CardHeader,
+  CardLeftSide,
+  CardRightSide,
+  CardTextBox,
+} from "../styled/CardHeader.js";
+
 export default function BookshelfCards(){
     const bookshelf = [
         {
@@ -25,16 +32,15 @@ export default function BookshelfCards(){
     ]
     return(
         <div className="bookshelf-cards">
-            <div className="bookshelf-header">
-                <div className="bookshelf-left-side">
-                    <FaBookOpen className="fiAwardClass"/>
-                    <div className="bookshelf-text-box">
-                        <h3>Digital Bookshelf</h3>
-                        <span>Reading Journey</span>
-                    </div>
-                </div>        
-            </div>
-
+            <CardHeader>
+                <CardLeftSide>
+                    <FaBookOpen className="headerTag" />
+                    <CardTextBox>
+                        <h3 className="card-title">Digital Bookshelf</h3>
+                        <span className="card-text">Reading Journey</span>
+                    </CardTextBox>
+                </CardLeftSide>        
+            </CardHeader>
             {/*Bookshelf bosy*/}
 
             {bookshelf.map((item) => (

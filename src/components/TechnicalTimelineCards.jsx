@@ -2,6 +2,13 @@ import { BsFillBuildingsFill } from "react-icons/bs";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { GrTechnology } from "react-icons/gr";
 import styled from "styled-components";
+import {
+  CardHeader,
+  CardLeftSide,
+  CardRightSide,
+  CardTextBox,
+} from "../styled/CardHeader.js";
+
 export default function TechnicalTimelineCards(){
     const technicalExperience = [
        {
@@ -79,18 +86,18 @@ export default function TechnicalTimelineCards(){
     return(
         <div className="technical-timeline-cards">
             {/*atechnical-timeline-header*/}
-            <div className="technical-header">
-                <div className="technical-left-side">
-                <BsFillBuildingsFill className="bsFillBuildingsFill"/>
-                    <div className="technical-text-box">
-                        <h3>Technical Timeline</h3>
-                        <span>University · Web · Self-taught Dev </span>
-                    </div>
-                </div>   
-                <div className="technical-right-side">
+            <CardHeader>
+                <CardLeftSide>
+                    <BsFillBuildingsFill className="headerTag" />
+                    <CardTextBox>
+                        <h3 className="card-title">Technical Timeline</h3>
+                        <span className="card-text">University · Web · Self-taught Dev</span>
+                    </CardTextBox>
+                </CardLeftSide>   
+                <CardRightSide>
                     <span>2024-Present</span>
-                </div> 
-              </div>  
+                </CardRightSide>      
+            </CardHeader>
             {/*technical-timeline-body*/}
 
                 {technicalExperience.map((item) => 

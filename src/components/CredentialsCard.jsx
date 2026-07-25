@@ -13,7 +13,7 @@ export default function CredentialsCards(){
         <div className="credentials-cards">
             <CardHeader>
                 <CardLeftSide>
-                   <FiAward className="fiAwardClass" />
+                   <FiAward className="headerTag" />
                     <CardTextBox>
                         <h3 className="card-title">Credentials</h3>
                         <span className="card-text">Certifications & Awards</span>

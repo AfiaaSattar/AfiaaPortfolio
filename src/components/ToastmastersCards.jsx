@@ -1,4 +1,11 @@
 import { GiPublicSpeaker, GiCrown } from "react-icons/gi";
+import {
+  CardHeader,
+  CardLeftSide,
+  CardRightSide,
+  CardTextBox,
+} from "../styled/CardHeader.js";
+
 export default function ToastmastersCard(){
     const ToastPositions = [
         {
@@ -45,18 +52,19 @@ export default function ToastmastersCard(){
     return(
         <div className="toastmasters-card">
          {/*Toastmasters-card-header*/}
-            <div className="toastmasters-header">
-                <div className="toastmasters-left-side">
-                  <GiPublicSpeaker className="fiAwardClass"/>
-                    <div className="toastmasters-text-box">
-                        <h3>Toastmasters Library</h3>
-                        <span>4+ Years · 3 Clubs · 5 Roles</span>
-                    </div>
-                </div>   
-                <div className="toastmasters-right-side">
-                    <span> <GiCrown /> Triple Crown Award</span>
-                </div>        
-            </div>
+            <CardHeader>
+                <CardLeftSide>
+                    <GiPublicSpeaker className="headerTag" />
+                    <CardTextBox>
+                        <h3 className="card-title">Toastmasters Library</h3>
+                        <span className="card-text">4+ Years · 3 Clubs · 5 Roles</span>
+                    </CardTextBox>
+                </CardLeftSide>   
+                <CardRightSide>
+                    <span>Triple Crown Award</span>
+                </CardRightSide>      
+            </CardHeader>
+            {/*Toastmasters-card-body*/}
             <div className="Featured-Certificate-footer">
                 <div className="dev">
                     <span>BTC</span>

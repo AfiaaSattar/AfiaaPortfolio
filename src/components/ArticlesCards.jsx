@@ -1,22 +1,28 @@
 import { IoMdBook } from "react-icons/io";
 import { CiCalendar } from "react-icons/ci";
+import {
+  CardHeader,
+  CardLeftSide,
+  CardRightSide,
+  CardTextBox,
+} from "../styled/CardHeader.js";
+
 export default function ArticlesCards(){
     return(
         <div className="articles-card">
         {/*articles-header*/}
-            <div className="articles-header">
-                <div className="articles-left-side">
-                  <IoMdBook className="fiAwardClass"/>
-                    <div className="articles-text-box">
-                        <h3>Recent Articles</h3>
-                        <span>Published writing & insights</span>
-                    </div>
-                </div>   
-                <div className="articles-right-side">
-                    <span>3 posts</span>
-                </div>        
-            </div>
-
+            <CardHeader>
+                <CardLeftSide>
+                   <IoMdBook className="headerTag" />
+                    <CardTextBox>
+                        <h3 className="card-title">Recent Articles</h3>
+                        <span className="card-text">Published writing & insights</span>
+                    </CardTextBox>
+                </CardLeftSide>   
+                <CardRightSide>
+                    <span>43 posts</span>
+                </CardRightSide>      
+            </CardHeader>
         {/*articles-body*/}
 
         <div className="articles-body"> 
