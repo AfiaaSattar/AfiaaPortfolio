@@ -115,7 +115,7 @@ color: #ffffff;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
-    background: rgba(15, 23, 42, 0.75);
+    background: rgba(15, 23, 42, 0.101);
 
     border: 1px solid rgba(255, 255, 255, 0.08);
 
@@ -161,7 +161,7 @@ color: #ffffff;
 }
 .avatar-wrapper{
   width: 150px;
-  height: 250px;
+  height: 240px;
   flex-shrink: 0;
 }
 .profile-img{
@@ -177,16 +177,16 @@ color: #ffffff;
   font-weight: 600;
 }
 .main-title{
-    font-size:64px;
-    font-weight:800;
-    color:#F8FAFC;
+  font-size:64px;
+  font-weight:800;
+  color:#F8FAFC;
   margin: 0;
-background: linear-gradient(
-  135deg,
-  #FFFFFF 0%,
-  #60A5FA 45%,
-  #A855F7 100%
-);
+  background: linear-gradient(
+    135deg,
+    #FFFFFF 0%,
+    #60A5FA 45%,
+    #A855F7 100%
+  );
  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -204,17 +204,6 @@ background: linear-gradient(
   align-items: center;
   justify-content: center;
 }
-.credentials-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-.credentials-left-side{  
- display: flex;
- align-items: center;
- gap:15px;
-}
 .fiAwardClass{
 width: 20px;
 height: 20px;
@@ -225,11 +214,7 @@ border-radius: 10px;
 color: #c084fc;
 box-shadow: 0 0 5px #c084fc, 0 0 10px #c084fc;
 }
-.credentials-text-box{
-display: flex;
-flex-direction: column;
-}
-.credentials-text-box h3{
+.card-title{
   color: #ffffff;
   margin: 5px 0px;
   font-size: 19px;
@@ -237,22 +222,19 @@ flex-direction: column;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
-.credentials-text-box span{
+.card-text{
   color: #64748b;
   font-size: 13px;
 }
-.credentials-right-side{
-color: #ffffff;
-}
-.credentials-right-side span{
+.right-card-text{
 width: 20px;
 height: 20px;
 padding: 5px;
 border: 1px solid ;
 border-radius: 20px;
-color: #c084fc;
+color: #1ac66d;
 font-size: 10px;
-box-shadow: 0 0 5px #c084fc, 0 0 10px #c084fc; 
+box-shadow: 0 0 5px #1ac66d, 0 0 10px #1ac66d; 
 }
 
 /*Featured Certificate*/

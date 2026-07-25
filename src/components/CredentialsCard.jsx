@@ -1,20 +1,28 @@
 import { FiAward } from "react-icons/fi";
 import toefl from "../assets/toefl.PNG";
+import {
+  CardHeader,
+  CardLeftSide,
+  CardRightSide,
+  CardTextBox,
+} from "../styled/CardHeader.js";
+
 export default function CredentialsCards(){
+
     return(
         <div className="credentials-cards">
-            <div className="credentials-header">
-                <div className="credentials-left-side">
+            <CardHeader>
+                <CardLeftSide>
                    <FiAward className="fiAwardClass" />
-                    <div className="credentials-text-box">
-                        <h3>Credentials</h3>
-                        <span>Certifications & Awards</span>
-                    </div>
-                </div>   
-               <div className="credentials-right-side">
-                    <span> 42 total</span>
-               </div>        
-            </div>
+                    <CardTextBox>
+                        <h3 className="card-title">Credentials</h3>
+                        <span className="card-text">Certifications & Awards</span>
+                    </CardTextBox>
+                </CardLeftSide>   
+                <CardRightSide>
+                    <span>42 Total</span>
+                </CardRightSide>      
+            </CardHeader>
             {/* The body of the credentials-cards */}
             <div className="Featured-Certificate">
                 <img src={toefl} />
