@@ -155,34 +155,19 @@ color: #ffffff;
 /* Picture class */
 .profile-header{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     align-items: flex-start;
+    position: relative;
 }
 .avatar-wrapper{
-  position: relative;
-  width: 90px;
-  height: 90px;
+  width: 150px;
+  height: 250px;
   flex-shrink: 0;
 }
 .profile-img{
-  width: 170%;
-  height: 300%;
-  object-fit: cover;
-  border-radius: 10px; /* Gives it those smooth rounded corners */
-
-  /* --- The Rainbow Border Magic --- */
-  border: 2px solid transparent; /* 1. Create a transparent border space */
-  background-origin: border-box; /* 4. Tells CSS to let the gradient stretch into the border area */
-  background-clip: padding-box, border-box; /* 5. Clips the dark background inside, leaving the border colorful */
-}
-.status-dot{
-    position: absolute;
-    bottom: -8%;
-    right: -7%;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: green;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
 }
 .eyebrow-text{
   font-size: 12px;
@@ -192,11 +177,17 @@ color: #ffffff;
   font-weight: 600;
 }
 .main-title{
-  font-size: 60px;
-  font-weight: 800;
+    font-size:64px;
+    font-weight:800;
+    color:#F8FAFC;
   margin: 0;
-  background: linear-gradient(135deg, #f1eff3 0%, #1e72fa 50%, #155763 100%);
-  -webkit-background-clip: text;
+background: linear-gradient(
+  135deg,
+  #FFFFFF 0%,
+  #60A5FA 45%,
+  #A855F7 100%
+);
+ -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -204,7 +195,7 @@ color: #ffffff;
   font-size: 15px;
   line-height: 1.6;
   color: #94a3b8; 
-  margin: 0;
+  margin-top: 10px;
 }
 
 /*Credentials Card*/

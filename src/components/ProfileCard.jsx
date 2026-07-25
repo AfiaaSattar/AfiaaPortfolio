@@ -1,24 +1,7 @@
 import personalPic from "../assets/afiaa.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { FaLinkedinIn, FaGithub, FaMediumM, FaYoutube, FaRegEnvelope } from "react-icons/fa";
-
-const SKILLS_DATA = [
-  { id: 1, name: "React", isHot: false },
-  { id: 2, name: "WordPress", isHot: false },
-  { id: 3, name: "JavaScript", isHot: false },
-  { id: 4, name: "PHP", isHot: false },
-  { id: 5, name: "MySQL", isHot: true },
-  { id: 6, name: "REST API", isHot: true },
-];
-
-const SOCIAL_DATA = [
-  {id: "li", name: "LinkedIn",url: "#", icon: <FaLinkedinIn />, type: "linkedin" },
-  { id: "gh", name: "GitHub", url: "#", icon: <FaGithub />, type: "github" },
-  { id: "md", name: "Medium", url: "#", icon: <FaMediumM />, type: "medium" },
-  { id: "yt", name: "YouTube", url: "#", icon: <FaYoutube />, type: "youtube" },
-  {id: "em", name: "Email", url: "mailto:example@email.com", type: "email", icon: <FaRegEnvelope />},
-];
+import { SKILLS_DATA, SOCIAL_DATA } from "../data/profile.js";
 
 const SkillTag = styled.div`
   display: inline-flex;
@@ -124,18 +107,17 @@ export default function ProfileCard() {
       <div className="profile-header">
         <div className="avatar-wrapper">
           <img src={personalPic} alt="Afiaa" className="profile-img" />
-          <span className="status-dot"></span>
         </div>
         <div>
           <span className="eyebrow-text">Digital Portfolio</span>
-          <h1 className="main-title">Hi, I'm Afiaa</h1>
+          <h1 className="main-title">Afiaa Sattar</h1>
           <p className="profile-bio">
-            IT Technical Assistant, Web Administrator & Toastmasters Leader
-            crafting digital experiences with precision and passion
+           IT Technical Assistant, Web Developer, and Toastmasters 
+           President passionate about building modern web applications, leading communities, and creating impactful digital experiences.
           </p>
         </div>
       </div>
-
+{/* Skills Section */}
       <div>
         {SKILLS_DATA.map(({ id, name, isHot }) => (
           <SkillTag key={id} $isHot={isHot}>
@@ -143,10 +125,12 @@ export default function ProfileCard() {
           </SkillTag>
         ))}
       </div>
+{/* Social Links Section */}      
       <div>
-        {SOCIAL_DATA.map(({ id, name, url, icon, type }) => (
+        {SOCIAL_DATA.map(({ id, name, url, icon: Icon, type }) => (
           <SocialButton key={id} href={url} $type={type}>
-            {icon} {name}
+            <Icon />
+             {name}
           </SocialButton>
         ))}
       </div>
