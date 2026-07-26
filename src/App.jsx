@@ -10,14 +10,14 @@ export default function App(){
 
   return(
     <div className="dashboard-container">
-          <ProfileCard />
-          <CredentialsCards />
-          <ArticlesCards />
-          <TechnicalTimelineCards />
-          <ProfessionalExperience />
-          <ToastmastersCard />
-          <BookshelfCards />
-          <ContactCards />
+        <ProfileCard />
+        <CredentialsCards />
+        <TechnicalTimelineCards />
+        <ProfessionalExperience />
+        <ArticlesCards />
+        <ToastmastersCard />
+        <BookshelfCards />
+        <ContactCards />
     </div>
   );
 }

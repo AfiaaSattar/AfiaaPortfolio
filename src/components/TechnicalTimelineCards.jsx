@@ -1,61 +1,13 @@
-import { BsFillBuildingsFill } from "react-icons/bs";
-import { AiOutlineGlobal } from "react-icons/ai";
-import { GrTechnology } from "react-icons/gr";
 import styled from "styled-components";
+import { BsFillBuildingsFill } from "react-icons/bs";
 import {
   CardHeader,
   CardLeftSide,
   CardRightSide,
   CardTextBox,
 } from "../styled/CardHeader.js";
+import { technicalExperience } from "../data/technicalTimeline.js";
 
-export default function TechnicalTimelineCards(){
-    const technicalExperience = [
-       {
-        id: 1,
-        icon: <GrTechnology />,
-        title: " IT Technical Assistant",
-        situation: "CURRENT",
-        workPlace: "University of Technology",
-        date: "2022 – Present",
-        description: "Providing support to faculty and administrative staff, troubleshooting computer-related issues, managing digital documents and data, creating reports and spreadsheets, and assisting with day-to-day technology needs across departments.",
-        tags: [
-            "Technical Support",
-            "Microsoft Office",
-            "IT Administration",
-            "Problem Solving"
-        ],
-        themeColor: "green"
-       },
-       {
-        id: 2,
-        icon: <AiOutlineGlobal />,
-        title: " Website Unit Head",
-        situation: "ACTIVE",
-        workPlace: "University of Technology",
-        date: "Jan 2026 – Present",
-        description:  "Leading the university website by managing WordPress content, publishing updates, coordinating website improvements, and ensuring accurate and timely online communication.",
-        tags:[
-        "WordPress",
-        "Content Management",
-        "Website Administration",
-        "HTML",
-        "Digital Content"
-        ],
-        themeColor: "green"
-       },
-       {
-        id: 3,
-        icon: "</>",
-        title: " Frontend Developer",
-        situation: "SELF-TAUGHT",
-        workPlace: "Independent — this portfolio is proof",
-        date: "2022 – Present",
-        description: "Self-taught React, JavaScript, CSS and modern tooling. Built this entire portfolio from scratch as a live demonstration of those skills.",
-        tags: ["React", "JavaScript", "CSS"],
-        themeColor: "green"
-       },
-    ]
     const Situation = styled.p`
         background-color: #17a8562e;
         border-radius: 10px;
@@ -83,6 +35,7 @@ export default function TechnicalTimelineCards(){
     const Tags = styled.p`
   
     `
+export default function TechnicalTimelineCards(){
     return(
         <div className="technical-timeline-cards">
             {/*atechnical-timeline-header*/}
@@ -100,27 +53,27 @@ export default function TechnicalTimelineCards(){
             </CardHeader>
             {/*technical-timeline-body*/}
 
-                {technicalExperience.map((item) => 
-                   <div className="technical-body" key={item.id}>
-                    <div>
-                      <span className="icon">{item.icon}</span>
-                    </div>
-                     <div>
-                        <span>{item.title}</span>
-                        <Situation>{item.situation}</Situation>
-                        <WorkPlace>{item.workPlace}</WorkPlace>
-                        <Datex>{item.date}</Datex>
-                        <Description>{item.description}</Description>
-                        <div className="tags-container">
-                            {item.tags.map((tag,index) => (
-                                <span key={index} className="custom-tag">
-                                    {tag}
-                                </span>
-                            ))}
-                       </div>
-                     </div>
-                   </div> 
-                )}             
+{technicalExperience.map((item) => 
+    <CardItem  key={item.id} $color={item.themeColor}>
+        <div>
+            <span className="icon">{item.icon}</span>
+        </div>
+     <div>
+        <span>{item.title}</span>
+            <Situation>{item.situation}</Situation>
+            <WorkPlace>{item.workPlace}</WorkPlace>
+            <Datex>{item.date}</Datex>
+            <Description>{item.description}</Description>
+                <div className="tags-container">
+                    {item.tags.map((tag,index) => (
+                        <span key={index} className="custom-tag">
+                            {tag}
+                        </span>
+                    ))}
+        </div>
+       </div>
+    </CardItem> 
+)}             
         </div>
     );
 }

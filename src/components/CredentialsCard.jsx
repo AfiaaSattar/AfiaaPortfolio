@@ -8,7 +8,6 @@ import {
 } from "../styled/CardHeader.js";
 import { certificate } from "../data/credentials.js";
 export default function CredentialsCards(){
-
     return(
         <div className="credentials-cards">
             <CardHeader>
