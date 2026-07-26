@@ -1,9 +1,11 @@
 import { AiOutlineGlobal } from "react-icons/ai";
 import { GrTechnology } from "react-icons/gr";
+import tech from "../assets/uot.jpg";
+import self from "../assets/self-learning.png";
 export const technicalExperience = [
        {
         id: 1,
-        icon: GrTechnology,
+        icon: tech,
         title: " IT Technical Assistant",
         situation: "CURRENT",
         workPlace: "University of Technology",
@@ -19,7 +21,7 @@ export const technicalExperience = [
        },
        {
         id: 2,
-        icon: AiOutlineGlobal,
+        icon: tech,
         title: " Website Unit Head",
         situation: "ACTIVE",
         workPlace: "University of Technology",
@@ -36,13 +38,13 @@ export const technicalExperience = [
        },
        {
         id: 3,
-        icon: "</>",
+        icon: self,
         title: " Frontend Developer",
         situation: "SELF-TAUGHT",
         workPlace: "Independent — this portfolio is proof",
         date: "2022 – Present",
         description: "Self-taught React, JavaScript, CSS and modern tooling. Built this entire portfolio from scratch as a live demonstration of those skills.",
-        tags: ["React", "JavaScript", "CSS"],
+        tags: ["React", "JavaScript", "CSS/HTML"],
         themeColor: "#C084FC"
        },
     ]

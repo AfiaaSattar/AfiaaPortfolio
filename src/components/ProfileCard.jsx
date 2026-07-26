@@ -2,7 +2,7 @@ import personalPic from "../assets/afiaa.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { SKILLS_DATA, SOCIAL_DATA } from "../data/profile.js";
-
+import { CardContent } from "../styled/CardItem.js";
 const SkillTag = styled.div`
   display: inline-flex;
   gap: 10px;
@@ -108,14 +108,14 @@ export default function ProfileCard() {
         <div className="avatar-wrapper">
           <img src={personalPic} alt="Afiaa" className="profile-img" />
         </div>
-        <div>
+        <CardContent>
           <span className="eyebrow-text">Digital Portfolio</span>
           <h1 className="main-title">Afiaa Sattar</h1>
           <p className="profile-bio">
            IT Technical Assistant, Web Developer, and Toastmasters 
            President passionate about building modern web applications, leading communities, and creating impactful digital experiences.
           </p>
-        </div>
+        </CardContent>
       </div>
 {/* Skills Section */}
       <div>

@@ -1,7 +1,8 @@
-const CardItem = styled.div`
+import styled from "styled-components";
+export const CardItem = styled.div`
   display: flex;
   gap: 10px;
-  padding: 30px;
+  padding: 15px;
   margin-top: 20px;
   border-radius: 15px;
 
@@ -20,3 +21,26 @@ const CardItem = styled.div`
     box-shadow: 0 0 20px ${({ $color }) => `${$color}40`};
   }
 `
+export const CardContent = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+export const  TagsContainer = styled.div`{
+ display: flex;
+ flex-wrap: wrap;
+ gap: 7px;
+ margin-top: 10px;
+}`
+export const CustomTag = styled.span`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid ${({ $color }) => `${$color}55`};
+  border-radius: 16px;
+  padding: 8px 12px;
+  color: ${({ $color }) => $color};
+  background-color: ${({ $color }) => `${$color}10`};
+  font-size: 13px;
+  white-space: nowrap;
+  margin: 3px;
+`;

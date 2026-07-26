@@ -1,45 +1,16 @@
 import { PiBuildingApartmentDuotone } from "react-icons/pi";
 import { GrTechnology } from "react-icons/gr";
-import { HiUsers } from "react-icons/hi2";
-import { IoCall } from "react-icons/io5";
+
 import {
   CardHeader,
   CardLeftSide,
   CardRightSide,
   CardTextBox,
 } from "../styled/CardHeader.js";
-
-
+import { CardItem } from "../styled/CardItem.js";
+import { zainPositions, IPPositions } from "../data/professionalExperience.js";
 export default function ProfessionalExperience(){
-    const zainPositions = [
-        {
-            id: 1,
-            icon: <IoCall />,
-            title: " Outbound Sales — Part-time",
-            date: "Sep 2019 – Jan 2021",
-        },
-        {
-            id: 2,
-            icon: <IoCall />,
-            title: " Outbound Sales — Full-time",
-            date: "Jan 2021 – Jun 2022",
-        },
-        {
-            id: 3,
-            icon: <HiUsers />,
-            title: " B2B Key Account Management",
-            date: "Jun 2022 – Mar 2023",
-        }
-    ];
 
-    const IPPositions = [
-        {
-            id: 1,
-            icon: <IoCall />,
-            title: " IT Support Engineer",
-            date: "Mar 2023 – Mar 2025",
-        }
-    ]
     return(
         <div className="professional-experience">
             {/*professional-experience-header*/}
@@ -63,15 +34,15 @@ export default function ProfessionalExperience(){
 
             
                 {zainPositions.map((item) => (
-                    <div key={item.id} className="position-container" >
+                    <CardItem key={item.id} $color={item.themeColor}>
                       <div>
-                        <span>{item.icon}</span>
+                        <img className="icon" src={item.icon} alt={item.title} />
                       </div> 
                       <div>
                         <span>{item.title}</span>
                         <div>{item.date}</div>
                        </div> 
-                    </div>
+                    </CardItem>
                 ))}
         
            <div className="A">
@@ -79,15 +50,15 @@ export default function ProfessionalExperience(){
                 <span className="C">Integrated Path</span>
             </div>
                {IPPositions.map((item) => (
-                    <div key={item.id} className="position-container" >
-                       <div>
-                        <span>{item.icon}</span>
-                       </div>
-                       <div> 
+                    <CardItem key={item.id} $color={item.themeColor}>
+                      <div>
+                        <img className="icon" src={item.icon} alt={item.title} />
+                      </div> 
+                      <div>
                         <span>{item.title}</span>
                         <div>{item.date}</div>
-                      </div>
-                    </div>
+                       </div> 
+                    </CardItem>
                 ))}
             <br />
             <hr />

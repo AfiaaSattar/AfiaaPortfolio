@@ -7,7 +7,7 @@ import {
   CardTextBox,
 } from "../styled/CardHeader.js";
 import { technicalExperience } from "../data/technicalTimeline.js";
-
+import { CardItem, CardContent, TagsContainer, CustomTag } from "../styled/CardItem.js";
     const Situation = styled.p`
         background-color: #17a8562e;
         border-radius: 10px;
@@ -31,14 +31,17 @@ import { technicalExperience } from "../data/technicalTimeline.js";
     color: #8091a8;
     margin-top: 7px;
     font-size: 15px;
+    line-height: 1.6;
+    white-space: normal;
+    overflow-wrap: break-word;
     `
     const Tags = styled.p`
   
     `
 export default function TechnicalTimelineCards(){
     return(
-        <div className="technical-timeline-cards">
-            {/*atechnical-timeline-header*/}
+    <div className="technical-timeline-cards">
+        {/*atechnical-timeline-header*/}
             <CardHeader>
                 <CardLeftSide>
                     <BsFillBuildingsFill className="headerTag" />
@@ -51,29 +54,28 @@ export default function TechnicalTimelineCards(){
                     <span>2024-Present</span>
                 </CardRightSide>      
             </CardHeader>
-            {/*technical-timeline-body*/}
+        {/*technical-timeline-body*/}
 
-{technicalExperience.map((item) => 
-    <CardItem  key={item.id} $color={item.themeColor}>
-        <div>
-            <span className="icon">{item.icon}</span>
+        {technicalExperience.map((item) => 
+            <CardItem  key={item.id} $color={item.themeColor}>
+                <div style={{marginLeft: "0px"}}>
+                    <img className="icon" src={item.icon} alt={item.title} />
+                </div>
+                <CardContent>
+                    <span>{item.title}</span>
+                    <Situation>{item.situation}</Situation>
+                    <WorkPlace>{item.workPlace}</WorkPlace>
+                    <Datex>{item.date}</Datex>
+                    <Description>{item.description}</Description>
+                        <TagsContainer>
+                            {item.tags.map((tag,index) => (
+                                <CustomTag key={index} $color={item.themeColor}>
+                                    {tag}
+                                </CustomTag>
+                            ))}
+                        </TagsContainer>
+                </CardContent>
+            </CardItem> 
+        )}             
         </div>
-     <div>
-        <span>{item.title}</span>
-            <Situation>{item.situation}</Situation>
-            <WorkPlace>{item.workPlace}</WorkPlace>
-            <Datex>{item.date}</Datex>
-            <Description>{item.description}</Description>
-                <div className="tags-container">
-                    {item.tags.map((tag,index) => (
-                        <span key={index} className="custom-tag">
-                            {tag}
-                        </span>
-                    ))}
-        </div>
-       </div>
-    </CardItem> 
-)}             
-        </div>
-    );
-}
+ );}
