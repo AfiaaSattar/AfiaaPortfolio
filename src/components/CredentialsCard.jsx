@@ -1,11 +1,49 @@
 import { FiAward } from "react-icons/fi";
 import toefl from "../assets/toefl.PNG";
+import meta from "../assets/meta.webp";
+import google from "../assets/google.webp";
+import toast from "../assets/toast.png";
+import university from "../assets/university.png";
 import {
   CardHeader,
   CardLeftSide,
   CardRightSide,
   CardTextBox,
 } from "../styled/CardHeader.js";
+
+const certificate = [
+    {
+        id: 1,
+        name: "TOEFL iBT",
+        img: toefl,
+        description: "Language Test",
+    },
+        {
+        id: 2,
+        name: "Meta",
+        img: meta,
+        description: "Front-End",
+    },
+        {
+        id: 3,
+        name: "Google",
+        img: google,
+        description: "IT Support",
+    },
+           {
+        id: 4,
+        name: "W University",
+        img: university,
+        description: "Business Courses",
+    },
+       {
+        id: 5,
+        name: "Toast",
+        img: toast,
+        description: "Public Speaking",
+    },
+
+];
 
 export default function CredentialsCards(){
 
@@ -24,29 +62,30 @@ export default function CredentialsCards(){
                 </CardRightSide>      
             </CardHeader>
             {/* The body of the credentials-cards */}
-            <div className="Featured-Certificate">
-                <img src={toefl} />
-                 <div className="Featured-Certificate-text">
-                    <span> Featured Certificate </span>
-                    <h4>Meta Advanced React</h4>
-                    <span>Meta Platforms · Issued 2026</span>
-                 </div>
-                 <span className="verified">Verified</span>
+    <div className="Featured-Certificate">
+     <img src={toefl} alt="TOEFL Certificate" />
+
+        <div className="Featured-Certificate-text">
+            <span className="certificate-label">Featured Certificate</span>
+            <h4>TOEFL iBT</h4>
+            <div className="certificate-tags">
+                <span>Score: 90/120</span>
+                <span>Level: B2</span>
             </div>
+            <span>Issued: May 2026 · Official ETS Certificate</span>
+        </div>
+
+    <span className="verified">Verified</span>
+    </div>      
             {/* Footer of the Featured-Certificate */}
             <div className="Featured-Certificate-footer">
-                <div className="dev">
-                    <span>+17</span>
-                    <p>Dev</p>
+            {certificate.map((item) => (
+                <div key={item.id} className="certificate-item">
+                <img src={item.img} alt={item.name} />
+                <h5>{item.name}</h5>
+                <p>{item.description}</p>
                 </div>
-                <div className="leaderShip">
-                    <span>+10</span>
-                    <p>LeaderShip</p>
-                </div>
-                <div className="tech">
-                    <span>+15</span>
-                    <p>Tech</p>
-                </div>
+            ))}
             </div>
             {/*View All Credentials*/}
             <div className="credentials-button">
