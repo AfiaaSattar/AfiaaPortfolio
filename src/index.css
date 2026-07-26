@@ -240,11 +240,9 @@ box-shadow: 0 0 5px #1ac66d, 0 0 10px #1ac66d;
   justify-content: center;
 }
 /*Featured Certificate*/
-.Featured-Certificate{
-    display:flex;
-    align-items:center;
-    gap:18px;
-    margin:20px 0;
+.Featured-Certificate-container{
+    margin:30px 0;
+    margin-bottom:5px;
     padding:18px;
     border:1px solid rgba(192,132,252,.25);
     border-radius:18px;
@@ -252,11 +250,10 @@ box-shadow: 0 0 5px #1ac66d, 0 0 10px #1ac66d;
     box-shadow:0 8px 24px rgba(168,85,247,.12);
     transition:.3s ease;
 }
-
-.Featured-Certificate:hover{
-    transform:translateY(-3px);
-    border-color:#c084fc;
-    box-shadow:0 12px 35px rgba(192,132,252,.22);
+.Featured-Certificate{
+    display:flex;
+    align-items:center;
+    gap:18px;
 }
 
 .Featured-Certificate img{
@@ -343,10 +340,11 @@ box-shadow: 0 0 5px #1ac66d, 0 0 10px #1ac66d;
 /*Featured Certificate Footer*/
 .Featured-Certificate-footer{
     display:flex;
-    gap:20px;
+    gap:10px;
     justify-content:center;
     align-items:flex-start;
     flex-wrap:wrap;
+    margin-top:20px;
 }
 
 .certificate-item{
@@ -363,8 +361,8 @@ box-shadow: 0 0 5px #1ac66d, 0 0 10px #1ac66d;
 }
 
 .certificate-item img{
-    width:40px;
-    height:40px;
+    width:50px;
+    height:50px;
     border-radius: 15px;
 }
 
@@ -378,12 +376,13 @@ box-shadow: 0 0 5px #1ac66d, 0 0 10px #1ac66d;
     color:#94A3B8;
     font-size:13px;
 }
-.credentials-button{
+/*Certificate btn*/
+.credentials-btn{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.credentials-button button{
+.credentials-btn button{
 margin: 20px;
 height: 50px;
 width: 100%;
@@ -392,11 +391,16 @@ border-radius: 40px;
 border: 1px solid rgb(120, 64, 155);
 color: #ffffff;
 font-weight: 400;
-background-color: rgb(64, 87, 155);
+    background:linear-gradient(
+        135deg,
+        #7c3aed14 0%,
+        #a955f75b 55%,
+        #60a5fa6f 100%
+    );
 }
-.credentials-button button:hover {
+.credentials-btn button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px #4e36d38f, 0 0 10px #11457d; 
+  box-shadow: 0 0 30px #a955f75b, 0 0 10px #60a5fa6f; 
 }
 /*articles Card*/
 /*articles-header*/

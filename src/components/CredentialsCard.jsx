@@ -1,50 +1,12 @@
 import { FiAward } from "react-icons/fi";
 import toefl from "../assets/toefl.PNG";
-import meta from "../assets/meta.webp";
-import google from "../assets/google.webp";
-import toast from "../assets/toast.png";
-import university from "../assets/university.png";
 import {
   CardHeader,
   CardLeftSide,
   CardRightSide,
   CardTextBox,
 } from "../styled/CardHeader.js";
-
-const certificate = [
-    {
-        id: 1,
-        name: "TOEFL iBT",
-        img: toefl,
-        description: "Language Test",
-    },
-        {
-        id: 2,
-        name: "Meta",
-        img: meta,
-        description: "Front-End",
-    },
-        {
-        id: 3,
-        name: "Google",
-        img: google,
-        description: "IT Support",
-    },
-           {
-        id: 4,
-        name: "W University",
-        img: university,
-        description: "Business Courses",
-    },
-       {
-        id: 5,
-        name: "Toast",
-        img: toast,
-        description: "Public Speaking",
-    },
-
-];
-
+import { certificate } from "../data/credentials.js";
 export default function CredentialsCards(){
 
     return(
@@ -62,9 +24,9 @@ export default function CredentialsCards(){
                 </CardRightSide>      
             </CardHeader>
             {/* The body of the credentials-cards */}
+ <div className="Featured-Certificate-container">
     <div className="Featured-Certificate">
      <img src={toefl} alt="TOEFL Certificate" />
-
         <div className="Featured-Certificate-text">
             <span className="certificate-label">Featured Certificate</span>
             <h4>TOEFL iBT</h4>
@@ -74,23 +36,23 @@ export default function CredentialsCards(){
             </div>
             <span>Issued: May 2026 · Official ETS Certificate</span>
         </div>
-
-    <span className="verified">Verified</span>
-    </div>      
-            {/* Footer of the Featured-Certificate */}
-            <div className="Featured-Certificate-footer">
-            {certificate.map((item) => (
-                <div key={item.id} className="certificate-item">
-                <img src={item.img} alt={item.name} />
-                <h5>{item.name}</h5>
-                <p>{item.description}</p>
-                </div>
-            ))}
-            </div>
-            {/*View All Credentials*/}
-            <div className="credentials-button">
-                 <button>View All Credentials</button>
-            </div>
+      <span className="verified">Verified</span>
+     </div> 
+    {/* Footer of the Featured-Certificate */}
+    <div className="Featured-Certificate-footer">
+        {certificate.map((item) => (
+        <div key={item.id} className="certificate-item">
+            <img src={item.img} alt={item.name} />
+            <h5>{item.name}</h5>
+            <p>{item.description}</p>
         </div>
+    ))}   
+    </div>    
+  </div>  
+{/*View All Credentials*/}
+    <div className="credentials-btn">
+            <button>Browse All Credentials </button>
+    </div>
+</div>
     );
 }
