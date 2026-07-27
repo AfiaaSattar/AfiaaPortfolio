@@ -61,10 +61,9 @@ export default function ProfessionalExperience(){
                </div>
             <br />
             <hr className="hr1"/>
-
             <CardFooter>      
                 {ExperienceDetails.map((item) => (
-                <CardFooterItem $color={item.themeColor}>
+                <CardFooterItem key={item.id} $color={item.themeColor}>
                     <span>{item.num}</span>
                     <p>{item.desc}</p>
                 </CardFooterItem>

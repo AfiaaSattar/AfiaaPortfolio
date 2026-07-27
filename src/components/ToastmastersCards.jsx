@@ -5,7 +5,7 @@ import {
   CardRightSide,
   CardTextBox,
 } from "../styled/CardHeader.js";
-
+import { FooterBtn } from "../styled/Footerbtn.js";
 export default function ToastmastersCard(){
     const ToastPositions = [
         {
@@ -93,9 +93,9 @@ export default function ToastmastersCard(){
                 ))}
 
               {/*Toastmasters-footer-button*/}   
-                <div className="toast-button-wrapper">
-                   <button>View Full Toastmasters Journey</button> 
-                </div>
+            <FooterBtn>
+                <button>View Full Toastmasters Journey</button> 
+            </FooterBtn>
         </div>
     );
 }

@@ -17,8 +17,9 @@ export const CardFooterItem = styled.div`
   gap:4px;
   padding:16px 14px;
   border-radius:16px;
-  background:rgba(168,85,247,.08);
-  border:1px solid rgba(133, 78, 188, 0.368);
+  color: ${({$color}) => `${$color}`};
+  background: ${({$color}) => `${$color}10`};
+  border:1px solid  ${({$color}) => `$($color)55`};
   transition:.3s ease;
 
 

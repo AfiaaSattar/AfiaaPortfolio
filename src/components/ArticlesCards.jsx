@@ -6,7 +6,7 @@ import {
   CardRightSide,
   CardTextBox,
 } from "../styled/CardHeader.js";
-
+import { FooterBtn } from "../styled/Footerbtn.js";
 export default function ArticlesCards(){
     return(
         <div className="articles-card">
@@ -68,9 +68,9 @@ export default function ArticlesCards(){
         </div>
 
         {/*View All Credentials*/}
-            <div className="articles-button">
+            <FooterBtn>
                <button>View All on Medium</button>
-            </div>
+            </FooterBtn>
         </div>
     );
 }

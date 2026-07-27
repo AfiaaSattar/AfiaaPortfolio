@@ -8,6 +8,7 @@ import {
 } from "../styled/CardHeader.js";
 import { certificate } from "../data/credentials.js";
 import { CardFooter, CardFooterItem} from "../styled/CardFooter.js";
+import { FooterBtn } from "../styled/Footerbtn.js";
 export default function CredentialsCards(){
     return(
         <div className="credentials-cards">
@@ -41,7 +42,7 @@ export default function CredentialsCards(){
     {/* Footer of the Featured-Certificate */}
     <CardFooter>
         {certificate.map((item) => (
-        <CardFooterItem key={item.id} >
+        <CardFooterItem key={item.id} $color={item.themColor} >
             <img src={item.img} alt={item.name} />
             <h5>{item.name}</h5>
             <p>{item.description}</p>
@@ -50,9 +51,9 @@ export default function CredentialsCards(){
     </CardFooter>    
   </div>  
 {/*View All Credentials*/}
-    <div className="credentials-btn">
+    <FooterBtn>
             <button>Browse All Credentials </button>
-    </div>
+    </FooterBtn>
 </div>
     );
 }
