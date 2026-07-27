@@ -2,6 +2,7 @@ import { MdSupportAgent } from "react-icons/md";
 import { HiOutlinePhoneOutgoing } from "react-icons/hi";
 import { BsBriefcase } from "react-icons/bs";
 import { FiMonitor } from "react-icons/fi";
+import { technicalExperience } from "./technicalTimeline";
   export const zainPositions = [
   {
     id: 1,
@@ -34,4 +35,25 @@ export const IPPositions = [
     date: "Mar 2023 – Mar 2025",
     themeColor: "#C084FC",
   },
+];
+
+export const ExperienceDetails = [
+    {
+        id: 1,
+        num: 2019,
+        desc: "Started",
+        themeColor: "#7298a0"
+    },
+      {
+        id: 2,
+        num: 2,
+        desc: "Companies",
+        themeColor: "#178da8"
+    },
+      {
+        id: 3,
+        num: 4,
+        desc: "Roles",
+        themeColor: "#22C55E" 
+    },
 ];

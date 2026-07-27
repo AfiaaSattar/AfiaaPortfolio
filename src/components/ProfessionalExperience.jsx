@@ -9,7 +9,8 @@ import {
   CardTextBox,
 } from "../styled/CardHeader.js";
 import { CardItem } from "../styled/CardItem.js";
-import { zainPositions, IPPositions } from "../data/professionalExperience.js";
+import { zainPositions, IPPositions, ExperienceDetails } from "../data/professionalExperience.js";
+import { CardFooter, CardFooterItem} from "../styled/CardFooter.js";
 export default function ProfessionalExperience(){
     return(
         <div className="professional-experience">
@@ -59,24 +60,16 @@ export default function ProfessionalExperience(){
                 ))}
                </div>
             <br />
-            <hr />
-            <br />
-            
-            <div className="Featured-Certificate-footer">
-                <div className="dev">
-                    <span>2019</span>
-                    <p>Started</p>
-                </div>
-                <div className="leaderShip">
-                    <span>2</span>
-                    <p>Companies</p>
-                </div>
-                <div className="tech">
-                    <span>4</span>
-                    <p>Roles</p>
-                </div>
-            </div>
+            <hr className="hr1"/>
 
+            <CardFooter>      
+                {ExperienceDetails.map((item) => (
+                <CardFooterItem $color={item.themeColor}>
+                    <span>{item.num}</span>
+                    <p>{item.desc}</p>
+                </CardFooterItem>
+                ))}
+            </CardFooter>
         </div>
     );
 }

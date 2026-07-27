@@ -338,44 +338,7 @@ box-shadow: 0 0 5px #1ac66d, 0 0 10px #1ac66d;
 
 }
 /*Featured Certificate Footer*/
-.Featured-Certificate-footer{
-    display:flex;
-    gap:10px;
-    justify-content:center;
-    align-items:flex-start;
-    flex-wrap:wrap;
-    margin-top:20px;
-}
 
-.certificate-item{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-align:center;
-  gap:4px;
-  padding:16px 14px;
-  border-radius:16px;
-  background:rgba(168,85,247,.08);
-  border:1px solid rgba(133, 78, 188, 0.368);
-  transition:.3s ease;
-}
-
-.certificate-item img{
-    width:50px;
-    height:50px;
-    border-radius: 15px;
-}
-
-.certificate-item h5{
-    margin:0;
-    color:#F8FAFC;
-}
-
-.certificate-item p{
-    margin:0;
-    color:#94A3B8;
-    font-size:13px;
-}
 /*Certificate btn*/
 .credentials-btn{
   display: flex;
@@ -511,6 +474,18 @@ background:
 .jobsIcon{  
   width: 30px;
   height: 30px;
+}
+.hr1 {
+  border: none;
+  height: 1px;
+  margin: 24px 0;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(192, 132, 252, 0.5),
+    transparent
+  );
 }
 .tags-container{
  display: flex;

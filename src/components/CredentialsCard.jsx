@@ -7,6 +7,7 @@ import {
   CardTextBox,
 } from "../styled/CardHeader.js";
 import { certificate } from "../data/credentials.js";
+import { CardFooter, CardFooterItem} from "../styled/CardFooter.js";
 export default function CredentialsCards(){
     return(
         <div className="credentials-cards">
@@ -38,15 +39,15 @@ export default function CredentialsCards(){
       <span className="verified">Verified</span>
      </div> 
     {/* Footer of the Featured-Certificate */}
-    <div className="Featured-Certificate-footer">
+    <CardFooter>
         {certificate.map((item) => (
-        <div key={item.id} className="certificate-item">
+        <CardFooterItem key={item.id} >
             <img src={item.img} alt={item.name} />
             <h5>{item.name}</h5>
             <p>{item.description}</p>
-        </div>
+        </CardFooterItem >
     ))}   
-    </div>    
+    </CardFooter>    
   </div>  
 {/*View All Credentials*/}
     <div className="credentials-btn">
