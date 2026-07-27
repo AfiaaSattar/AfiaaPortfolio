@@ -508,6 +508,10 @@ background:
   height: 40px;
   border-radius: 10px;
 }
+.jobsIcon{  
+  width: 30px;
+  height: 30px;
+}
 .tags-container{
  display: flex;
  gap: 7px;
