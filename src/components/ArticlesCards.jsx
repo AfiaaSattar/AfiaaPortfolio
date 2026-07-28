@@ -1,5 +1,6 @@
 import { IoMdBook } from "react-icons/io";
 import { CiCalendar } from "react-icons/ci";
+import { HiArrowNarrowRight } from "react-icons/hi";
 import styled from "styled-components";
 import toast from "../assets/toast.png";
 import {
@@ -32,14 +33,18 @@ export default function ArticlesCards(){
         <ArticalCards> 
             {articles.map((item) => (
                 <ArticalCardsItem $color={item.themeColor}>
-                <div className="articles-body-header">
+                <div className="articles-body-header" style={{backgroundImage: `url(${item.pic})`}}>
                     <span>Medium</span>
                     <span>{item.time}</span>
                 </div>
                 <h5>{item.title}</h5>
                 <p> {item.desc}</p>
+                <hr className="hr1" />
                 <div className="articles-body-footer">
                     <span> <CiCalendar />{item.publish}</span>
+                    <a>
+                        Read on Medium <HiArrowNarrowRight />
+                    </a>    
                 </div>
                 </ArticalCardsItem>
                     ))}
