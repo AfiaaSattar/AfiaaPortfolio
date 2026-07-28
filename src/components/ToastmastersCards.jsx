@@ -2,10 +2,13 @@ import { GiPublicSpeaker, GiCrown } from "react-icons/gi";
 import {
   CardHeader,
   CardLeftSide,
-  CardRightSide,
+  CardRightSideToast,
   CardTextBox,
 } from "../styled/CardHeader.js";
+import triple from "../assets/triple.png";
 import { FooterBtn } from "../styled/Footerbtn.js";
+import {clubs} from "../data/toastmasters.js";
+import {CardFooter, CardFooterItem} from "../styled/CardFooter.js";
 export default function ToastmastersCard(){
     const ToastPositions = [
         {
@@ -60,21 +63,22 @@ export default function ToastmastersCard(){
                         <span className="card-text">4+ Years · 3 Clubs · 5 Roles</span>
                     </CardTextBox>
                 </CardLeftSide>   
-                <CardRightSide>
-                    <span>Triple Crown Award</span>
-                </CardRightSide>      
+                <CardRightSideToast>
+                    <span className="award">
+                        <img src={triple} alt="Triple Crown Award" />
+                        Triple Crown Award
+                    </span>
+                </CardRightSideToast>      
             </CardHeader>
             {/*Toastmasters-card-body*/}
-            <div className="Featured-Certificate-footer">
-                <div className="dev">
-                    <span>BTC</span>
-                    <p>Baghdad Toastmasters Club</p>
-                </div>
-                <div className="leaderShip">
-                    <span>TLTM</span>
-                    <p>Tigirs League TM Club</p>
-                </div>
-            </div>
+            <CardFooter>      
+                {clubs.map((item) => (
+                <CardFooterItem key={item.id} $color={item.themeColor}>
+                    <span>{item.shortName}</span>
+                    <p>{item.name}</p>
+                </CardFooterItem>
+                ))}
+            </CardFooter>
           {/*Toastmasters-body-loops*/}  
             {ToastPositions.map((item) => (
                    <div key={item.id} className="toast-position-container" >

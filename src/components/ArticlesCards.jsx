@@ -42,7 +42,7 @@ export default function ArticlesCards(){
                 <hr className="hr1" />
                 <div className="articles-body-footer">
                     <span> <CiCalendar />{item.publish}</span>
-                    <a>
+                    <a href={item.href} target="_blank" rel="noopener noreferrer">
                         Read on Medium <HiArrowNarrowRight />
                     </a>    
                 </div>
@@ -51,7 +51,7 @@ export default function ArticlesCards(){
         </ArticalCards>
         {/*View All Credentials*/}
             <FooterBtn>
-               <button>View All on Medium</button>
+               <button onClick={() => window.open("https://medium.com/@afiasattar2", "_blank")}>View All on Medium</button>
             </FooterBtn>
         </div>
     );

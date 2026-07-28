@@ -11,7 +11,8 @@ export const articles = [
         title: "From Corporate Burnout to Coding Bliss: Why a Government Job Was My Path Back to Programming",
         desc:  "We are often told to follow the “trend” of success: work for the biggest names, climb the ladder as fast as possible, and measure our worth by our job titles. For a long time, I did exactly that...",
         publish: "Apr 4,2026",
-        themeColor: "#22C55E"
+        themeColor: "#22C55E",
+        href: "https://medium.com/@afiasattar2/from-corporate-burnout-to-coding-bliss-why-a-government-job-was-my-path-back-to-programming-ec0a3077d032"
     },
         {
         id:2,
@@ -20,7 +21,8 @@ export const articles = [
         title: "More Than a Toastmasters Project: Discovering a New Hobby Through Writing",
         desc:  "When I started this project, my goal was simply to complete an assignment. I had never considered myself a writer, and I had never published articles before. However, after writing several articles...",
         publish: "Jun 4,2026",
-        themeColor: "#38BDF8"
+        themeColor: "#38BDF8",
+        href: "https://medium.com/@afiasattar2/more-than-a-toastmasters-project-discovering-a-new-hobby-through-writing-a9e130867766"
     },
         {
         id:3,
@@ -29,7 +31,8 @@ export const articles = [
         title: "Is Using AI for Everything Really Wrong?",
         desc:  "Lately, I have been thinking a lot about my relationship with AI. Sometimes I ask myself an uncomfortable question:If I use AI for almost everything, where is my creativity? ...",
         publish: "May 29,2026",
-        themeColor: "#C084FC"
+        themeColor: "#C084FC",
+        href: "https://medium.com/@afiasattar2/is-using-ai-for-everything-really-wrong-18164ffb5caa"
     },
         {
         id:4,
@@ -38,7 +41,8 @@ export const articles = [
         title: "How I Prepared for the TOEFL in 9 Days: My Strategy, Resources, and Honest Advice",
         desc:  "I decided to take the ETS TOEFL exam in a very short period because I had a deadline and no other option. The nearest available exam date gave me only nine days to prepare...",
         publish: "Apr 25,2026",
-        themeColor:  "#F59E0B"
+        themeColor:  "#F59E0B",
+        href: "https://medium.com/@afiasattar2/how-i-prepared-for-the-toefl-in-9-days-my-strategy-resources-and-honest-advice-888e0cad7807"
     },
 
 ]
