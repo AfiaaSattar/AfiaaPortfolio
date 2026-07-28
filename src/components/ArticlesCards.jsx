@@ -1,5 +1,7 @@
 import { IoMdBook } from "react-icons/io";
 import { CiCalendar } from "react-icons/ci";
+import styled from "styled-components";
+import toast from "../assets/toast.png";
 import {
   CardHeader,
   CardLeftSide,
@@ -7,6 +9,9 @@ import {
   CardTextBox,
 } from "../styled/CardHeader.js";
 import { FooterBtn } from "../styled/Footerbtn.js";
+import { ArticalCards, ArticalCardsItem } from "../styled/Articles.js";
+import { articles } from "../data/articles.js";
+
 export default function ArticlesCards(){
     return(
         <div className="articles-card">
@@ -23,50 +28,22 @@ export default function ArticlesCards(){
                     <span>43 posts</span>
                 </CardRightSide>      
             </CardHeader>
-        {/*articles-body*/}
-
-        <div className="articles-body"> 
-            <div className="articles-body-header">
-                <span>Medium</span>
-                <span>8 min read</span>
-            </div>
-            <h5>Mastering WordPress Security: A Complete Guide</h5>
-            <p>h ahiuahfuia uihaukhf hkja hkjf h ahfah jkhfa jkhfa
-                kja lkfj lkaj sfklj ksfj klj skafj jj flkajflkjsjf 
-            </p>
-            <div className="articles-body-footer">
-                <span> <CiCalendar /> May 18,2026</span>
-            </div>
-        </div>
-        
-        <div className="articles-body"> 
-            <div className="articles-body-header">
-                <span>Medium</span>
-                <span>8 min read</span>
-            </div>
-            <h5>Mastering WordPress Security: A Complete Guide</h5>
-            <p>h ahiuahfuia uihaukhf hkja hkjf h ahfah jkhfa jkhfa
-                kja lkfj lkaj sfklj ksfj klj skafj jj flkajflkjsjf 
-            </p>
-            <div className="articles-body-footer">
-                <span> <CiCalendar /> May 18,2026</span>
-            </div>
-        </div>
-
-        <div className="articles-body"> 
-            <div className="articles-body-header">
-                <span>Medium</span>
-                <span>8 min read</span>
-            </div>
-            <h5>Mastering WordPress Security: A Complete Guide</h5>
-            <p>h ahiuahfuia uihaukhf hkja hkjf h ahfah jkhfa jkhfa
-                kja lkfj lkaj sfklj ksfj klj skafj jj flkajflkjsjf 
-            </p>
-            <div className="articles-body-footer">
-                <span> <CiCalendar /> May 18,2026</span>
-            </div>
-        </div>
-
+        {/*articles-body*/}    
+        <ArticalCards> 
+            {articles.map((item) => (
+                <ArticalCardsItem $color={item.themeColor}>
+                <div className="articles-body-header">
+                    <span>Medium</span>
+                    <span>{item.time}</span>
+                </div>
+                <h5>{item.title}</h5>
+                <p> {item.desc}</p>
+                <div className="articles-body-footer">
+                    <span> <CiCalendar />{item.publish}</span>
+                </div>
+                </ArticalCardsItem>
+                    ))}
+        </ArticalCards>
         {/*View All Credentials*/}
             <FooterBtn>
                <button>View All on Medium</button>
