@@ -5,6 +5,7 @@
             icon: FaCheckCircle,
             bookName: "Clean Code",
             writerName: "Robert C. Martin",
+            desc: "jhihuiu hui  huihiu hnuihnui nhuih iuh uinhuih niuh ",
             tags: ["Completed", "Engineering"],
         },
                 {

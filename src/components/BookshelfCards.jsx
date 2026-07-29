@@ -5,6 +5,9 @@ import {
   CardRightSide,
   CardTextBox,
 } from "../styled/CardHeader.js";
+import test from "../assets/1.jpg";
+import {CardItem, CardContent, TagsContainer, CustomTag} from "../styled/CardItem.js";
+import {RoleDescription, AwardSection, SmallText, MainPosition} from "../styled/Toastmasters.js";
 import { bookshelf, progress} from "../data/bookshelf.js";
 import { CardFooter, CardFooterItem } from "../styled/CardFooter.js";
 export default function BookshelfCards(){
@@ -22,16 +25,21 @@ export default function BookshelfCards(){
             {/*Bookshelf bosy*/}
 
             {bookshelf.map((item) => (
-                <div key={item.id} className="toast-position-container"> 
-                    <span>{item.bookName}</span>
-                    <span>{item.icon}</span>
-                    <p>{item.writerName}</p>
-                    {item.tags.map((tag,index) => (
-                        <span key={index} className="custom-tag">
-                         {tag}
-                        </span>
-                    ))}
-                </div>    
+                <CardItem 
+                 $color={item.themeColor}
+                 style={{ alignItems: "center" }}
+                 >
+                    <AwardSection>
+                        <img alt={item.imageAlt} src={test}/>
+                    </AwardSection>
+                    
+                    <RoleDescription>
+                        <h5>{item.bookName}</h5>
+                        <p>{item.writerName}</p>
+                        <p>{item.desc}</p>
+                    </RoleDescription>
+                    
+                </CardItem>    
             ))}
            <CardFooter>      
                 {progress.map((item) => (
