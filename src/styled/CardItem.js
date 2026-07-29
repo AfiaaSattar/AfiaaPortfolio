@@ -1,11 +1,11 @@
 import styled from "styled-components";
 export const CardItem = styled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   padding: 15px;
   margin-top: 20px;
   border-radius: 15px;
-
   border: 1px solid ${({ $color }) => `${$color}55`};
 
   background:
@@ -22,8 +22,8 @@ export const CardItem = styled.div`
   }
 `
 export const CardContent = styled.div`
-  flex: 1;
-  min-width: 0;
+  flex: 2 1 350px;
+  justify-content: center;
 `;
 export const  TagsContainer = styled.div`{
  display: flex;
@@ -31,6 +31,7 @@ export const  TagsContainer = styled.div`{
  gap: 7px;
  margin-top: 10px;
 }`
+
 export const CustomTag = styled.span`
   display: inline-flex;
   align-items: center;

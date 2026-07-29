@@ -1,24 +1,23 @@
 import { GiPublicSpeaker, GiCrown } from "react-icons/gi";
+import { IoLocationOutline } from "react-icons/io5";
+import { MdOutlineDateRange } from "react-icons/md";
 import {
   CardHeader,
   CardLeftSide,
   CardRightSideToast,
   CardTextBox,
 } from "../styled/CardHeader.js";
+import test from "../assets/1.jpg";
 import triple from "../assets/triple.png";
 import { FooterBtn } from "../styled/Footerbtn.js";
 import {clubs, toastPositions} from "../data/toastmasters.js";
 import {CardFooter, CardFooterItem} from "../styled/CardFooter.js";
-import { CardItem, CardContent, TagsContainer, CustomTag } from "../styled/CardItem.js";
+import {CardItem, CardContent, TagsContainer, CustomTag} from "../styled/CardItem.js";
+import {RoleDescription, AwardSection, SmallText, MainPosition} from "../styled/Toastmasters.js";
 import styled from "styled-components";
 const Position = styled.h3`
 color: ${({ $color }) => `${$color}`};
 `
-    const WorkPlace = styled.p`
-    color: #4578ae;
-    margin: 0px;
-    font-size: 15px;
-    `
 export default function ToastmastersCard(){
     return(
         <div className="toastmasters-card">
@@ -52,14 +51,29 @@ export default function ToastmastersCard(){
             </CardFooter>
           {/*Toastmasters-body-loops*/}  
             {toastPositions.map((item) => (
-                <CardItem $color={item.themeColor} >
-                     <CardContent key={item.id}>
-                    <CustomTag  style={{ color: `${item.themeColor}` }}>
-                       <item.icon className="jobsIcon"/>
-                       <Position> {item.position}{item.date}</Position>
-                    </CustomTag>
-                     <WorkPlace>{item.clubName}</WorkPlace>
-                     <WorkPlace>{item.fullDate}</WorkPlace>
+                <CardItem 
+                 $color={item.themeColor}
+                 style={{ alignItems: "center" }}
+                 >
+           {/*1st flex */}  
+                 <CardContent key={item.id}>
+                   <TagsContainer>
+                      <MainPosition  style={{ color: `${item.themeColor}`}}>
+                        <item.icon className="jobsIcon"/>
+                        <Position>{item.position}</Position>
+                        <Position>-  {item.date} </Position>
+                      </MainPosition>
+                    </TagsContainer> 
+
+                     <SmallText>
+                        <IoLocationOutline />
+                        {item.clubName}
+                     </SmallText>
+                     <SmallText>
+                        <MdOutlineDateRange />
+                        {item.fullDate}
+                     </SmallText>
+                     <br />
                         <span>
                             {item.tags.map((tag,index) => (
                                 <CustomTag key={index} $color={item.themeColor}> 
@@ -67,16 +81,23 @@ export default function ToastmastersCard(){
                                 </CustomTag>
                             ))}
                         </span>
-                   </CardContent> 
-                   <div>{item.description}</div>
-                   <div>{item.image}</div>
+                 </CardContent> 
+              {/*2nd flex */} 
+                   <RoleDescription>
+                    <h5>Abouth this role</h5>
+                    <p>{item.description}</p>
+                   </RoleDescription>
+               {/*3rd flex */}     
+                   <AwardSection>
+                     <img alt={item.imageAlt} src={test}/>
+                   </AwardSection>
                 </CardItem>
                 ))}
 
-              {/*Toastmasters-footer-button*/}   
-            <FooterBtn>
-                <button>View Full Toastmasters Journey</button> 
-            </FooterBtn>
+{/*Toastmasters-footer-button*/}   
+    <FooterBtn>
+        <button>View Full Toastmasters Journey</button> 
+    </FooterBtn>
         </div>
     );
 }

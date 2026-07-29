@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {
   FaUser,
-  FaUserTie,
+  FaCrown,
   FaClipboardList,
   FaChalkboardTeacher,
 } from "react-icons/fa";
@@ -88,7 +88,7 @@ export const toastPositions = [
     clubName: "Baghdad Toastmasters",
     position: "Member",
     icon: FaUser,
-    themeColor: "#f59e0b",
+    themeColor: "#47a757",
     image: "/images/toastmasters/member-baghdad-2025.jpg",
     imageAlt: "Member at Baghdad Toastmasters",
     fullDate: "Mar 2025 – Oct 2025",
@@ -128,7 +128,7 @@ export const toastPositions = [
     date: 2026,
     clubName: "Tigris League TM Club",
     position: "President",
-    icon: FaUserTie,
+    icon: FaCrown,
     themeColor: "#facc15",
     image: "/images/toastmasters/president-tltm.jpg",
     imageAlt: "President of Tigris League TM Club",
