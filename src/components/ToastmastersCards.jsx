@@ -7,51 +7,19 @@ import {
 } from "../styled/CardHeader.js";
 import triple from "../assets/triple.png";
 import { FooterBtn } from "../styled/Footerbtn.js";
-import {clubs} from "../data/toastmasters.js";
+import {clubs, toastPositions} from "../data/toastmasters.js";
 import {CardFooter, CardFooterItem} from "../styled/CardFooter.js";
+import { CardItem, CardContent, TagsContainer, CustomTag } from "../styled/CardItem.js";
+import styled from "styled-components";
+const Position = styled.h3`
+color: ${({ $color }) => `${$color}`};
+`
+    const WorkPlace = styled.p`
+    color: #4578ae;
+    margin: 0px;
+    font-size: 15px;
+    `
 export default function ToastmastersCard(){
-    const ToastPositions = [
-        {
-            id: 1,
-            date: 2021,
-            clubName: " Baghdad TM Club",
-            position: "Secretary",
-            fullDate: "Sep 2021 – May 2022",
-            tags: ["Team Management"]
-        },
-        {
-            id: 2,
-            date: 2022,
-            clubName: " Baghdad TM Club",
-            position: "Secretary",
-            fullDate: "Sep 2021 – May 2022",
-            tags: ["Team Management"]
-        },
-        {
-            id: 3,
-            date: 2023,
-            clubName: " Tigris League TM Club",
-            position: "Member",
-            fullDate: "Aug 2023 – Present",
-            tags: ["Coaching", "Team Management"]
-        },
-        {
-            id: 4,
-            date: 2025,
-            clubName: " Baghdad Toastmasters",
-            position: "Member",
-            fullDate: "Mar 2025 – Oct 2025",
-            tags: ["Leadership"]  
-        },
-                {
-            id: 5,
-            date: 2025,
-            clubName: " Tigris League TM Club",
-            position: "Presedent",
-            fullDate: "Jun 2025 – Present",
-            tags: ["Coaching", "Team Management","Training"]  
-        }
-    ]
     return(
         <div className="toastmasters-card">
          {/*Toastmasters-card-header*/}
@@ -66,7 +34,10 @@ export default function ToastmastersCard(){
                 <CardRightSideToast>
                     <span className="award">
                         <img src={triple} alt="Triple Crown Award" />
-                        Triple Crown Award
+                        <div className="triple-text">
+                         <p>Triple Crown Award</p>
+                         <p >A symbol of dedication and leadership</p>
+                        </div>
                     </span>
                 </CardRightSideToast>      
             </CardHeader>
@@ -80,20 +51,26 @@ export default function ToastmastersCard(){
                 ))}
             </CardFooter>
           {/*Toastmasters-body-loops*/}  
-            {ToastPositions.map((item) => (
-                   <div key={item.id} className="toast-position-container" >
-                        <span>{item.date}</span>
-                        <span className="club-name">{item.clubName}</span>
-                        <h4>{item.position}</h4>
-                        <p>{item.fullDate}</p>
+            {toastPositions.map((item) => (
+                <CardItem $color={item.themeColor} >
+                     <CardContent key={item.id}>
+                    <CustomTag  style={{ color: `${item.themeColor}` }}>
+                       <item.icon className="jobsIcon"/>
+                       <Position> {item.position}{item.date}</Position>
+                    </CustomTag>
+                     <WorkPlace>{item.clubName}</WorkPlace>
+                     <WorkPlace>{item.fullDate}</WorkPlace>
                         <span>
                             {item.tags.map((tag,index) => (
-                                <span key={index} className="custom-tag"> 
-                                {tag}
-                                </span>
+                                <CustomTag key={index} $color={item.themeColor}> 
+                                 {tag}
+                                </CustomTag>
                             ))}
                         </span>
-                   </div> 
+                   </CardContent> 
+                   <div>{item.description}</div>
+                   <div>{item.image}</div>
+                </CardItem>
                 ))}
 
               {/*Toastmasters-footer-button*/}   

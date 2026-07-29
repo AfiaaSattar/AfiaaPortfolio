@@ -26,15 +26,15 @@
         height: 50px;
   }
        ` 
-       
  export const CardRightSideToast = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 6px 14px;
+    text-wrap: wrap;
     img{
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
   }
        `  
 export const CardTextBox = styled.div`

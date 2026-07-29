@@ -536,15 +536,24 @@ box-shadow: 0 0 15px #a9c61a, 0 0 10px #a9c61a;
   align-items: center;
   gap: 5px;
   padding: 0 14px;
-
   color: #FFD700;
   background: rgba(255, 215, 0, 0.08);
   border: 1px solid rgba(255, 215, 0, 0.35);
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.25);
-
+  width: 200px;
   border-radius: 10px;
   font-size: 12px;
   font-weight: 600;
+  text-wrap: wrap;
+}
+.triple-text p:first-of-type{
+ margin-bottom: 0px;
+ margin-top: 4px;
+}
+.triple-text p:nth-of-type(2){
+  color: #64748b;
+   margin-top: 4px;
+   margin-bottom: 4px;
 }
 /*toast-position-container*/
 .toast-position-container{
