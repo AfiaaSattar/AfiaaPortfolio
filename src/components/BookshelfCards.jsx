@@ -5,11 +5,16 @@ import {
   CardRightSide,
   CardTextBox,
 } from "../styled/CardHeader.js";
-import test from "../assets/1.jpg";
-import {CardItem, CardContent, TagsContainer, CustomTag} from "../styled/CardItem.js";
-import {RoleDescription, AwardSection, SmallText, MainPosition} from "../styled/Toastmasters.js";
+import test from "../assets/AfiaaBook.png";
+import { CardContent, TagsContainer, CustomTag} from "../styled/CardItem.js";
+import { AwardSection, SmallText, MainPosition} from "../styled/Toastmasters.js";
+import {CardItem2, BookDescription, ImageSection} from "../styled/Book.js";
 import { bookshelf, progress} from "../data/bookshelf.js";
 import { CardFooter, CardFooterItem } from "../styled/CardFooter.js";
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap"
+  rel="stylesheet"
+/>
 export default function BookshelfCards(){
     return(
         <div className="bookshelf-cards">
@@ -22,25 +27,22 @@ export default function BookshelfCards(){
                     </CardTextBox>
                 </CardLeftSide>        
             </CardHeader>
-            {/*Bookshelf bosy*/}
-
+   {/*Bookshelf body*/}
             {bookshelf.map((item) => (
-                <CardItem 
-                 $color={item.themeColor}
-                 style={{ alignItems: "center" }}
-                 >
-                    <AwardSection>
-                        <img alt={item.imageAlt} src={test}/>
-                    </AwardSection>
-                    
-                    <RoleDescription>
+              <CardItem2 $color={item.themeColor}>
+                    <ImageSection>
+                        <img alt={item.imageAlt} src={item.imag}/>
+                    </ImageSection>
+
+                    <BookDescription>
                         <h5>{item.bookName}</h5>
                         <p>{item.writerName}</p>
                         <p>{item.desc}</p>
-                    </RoleDescription>
+                    </BookDescription>
                     
-                </CardItem>    
+              </CardItem2>    
             ))}
+   {/*Bookshelf footer*/}
            <CardFooter>      
                 {progress.map((item) => (
                 <CardFooterItem key={item.id} $color={item.themeColor}>
@@ -49,6 +51,15 @@ export default function BookshelfCards(){
                 </CardFooterItem>
                 ))}
             </CardFooter>
+ {/*Bookshelf picture*/}
+            <CardItem2>
+              <div >
+                <p>More books exist.</p>
+                <p>My portfolio has boundaries.</p>
+                <p> My <span className="curiosity">curiosity</span> doesn't.</p>
+              </div>    
+                 <img  className="test" src={test}/>  
+              </CardItem2> 
         </div>
     );
 }

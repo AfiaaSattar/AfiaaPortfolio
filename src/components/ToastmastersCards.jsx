@@ -51,7 +51,7 @@ export default function ToastmastersCard(){
             </CardFooter>
           {/*Toastmasters-body-loops*/}  
             {toastPositions.map((item) => (
-                <CardItem 
+        <CardItem 
                  $color={item.themeColor}
                  style={{ alignItems: "center" }}
                  >
@@ -91,7 +91,7 @@ export default function ToastmastersCard(){
                    <AwardSection>
                      <img alt={item.imageAlt} src={test}/>
                    </AwardSection>
-                </CardItem>
+          </CardItem>
                 ))}
 
 {/*Toastmasters-footer-button*/}   

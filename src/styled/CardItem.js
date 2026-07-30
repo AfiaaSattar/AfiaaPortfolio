@@ -7,7 +7,6 @@ export const CardItem = styled.div`
   margin-top: 20px;
   border-radius: 15px;
   border: 1px solid ${({ $color }) => `${$color}55`};
-
   background:
     radial-gradient(
       circle at 20% 20%,
