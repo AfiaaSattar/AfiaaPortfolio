@@ -92,12 +92,6 @@ export default function ContactCards() {
       <p className="footer-copyright">
         © 2026 Afiaa. Digital Ecosystem & Portfolio
       </p>
-
-      {/* Floating Chat Icon */}
-      <div className="chat-widget">
-        <FiMessageCircle />
-        <span className="online-dot"></span>
-      </div>
       </div>
    
     </div>

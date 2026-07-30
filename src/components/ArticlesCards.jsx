@@ -2,7 +2,6 @@ import { IoMdBook } from "react-icons/io";
 import { CiCalendar } from "react-icons/ci";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import styled from "styled-components";
-import toast from "../assets/toast.png";
 import {
   CardHeader,
   CardLeftSide,

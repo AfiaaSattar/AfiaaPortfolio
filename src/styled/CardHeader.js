@@ -37,6 +37,26 @@
         height: 60px;
   }
        `  
+ export const CardRightSideToastCompact = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 14px;
+    text-wrap: wrap;
+    img{
+        width: 60px;
+        height: 60px;
+}
+  @media (max-width: 640px) {
+    padding: 0px;
+    margin: 0px; 
+  .award{
+    padding: 0px;
+    margin: 0px; 
+    gap: 0;
+  }
+}
+`;
 export const CardTextBox = styled.div`
     display: flex;
     flex-direction: column;

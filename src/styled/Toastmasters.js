@@ -46,3 +46,6 @@ export const MainPosition = styled.span`
   white-space: nowrap;
   margin: 3px;
 `;
+export const Position = styled.h3`
+color: ${({ $color }) => `${$color}`};
+`

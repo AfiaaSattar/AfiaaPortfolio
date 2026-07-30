@@ -5,10 +5,8 @@ import {
   CardRightSide,
   CardTextBox,
 } from "../styled/CardHeader.js";
-import test from "../assets/AfiaaBook.png";
-import { CardContent, TagsContainer, CustomTag, CardItem} from "../styled/CardItem.js";
-import { AwardSection, SmallText, MainPosition} from "../styled/Toastmasters.js";
-import {CardItem2, BookDescription, ImageSection, CardItemFooter2, CardItemPic} from "../styled/Book.js";
+import AfiaaBook from "../assets/AfiaaBook.png";
+import {BSCardItem, ImageSection, BookDescription, BookShellFooter, BSFooterContainer} from "../styled/Book.js";
 import { bookshelf, progress} from "../data/bookshelf.js";
 import { CardFooter, CardFooterItem } from "../styled/CardFooter.js";
 <link
@@ -29,18 +27,17 @@ export default function BookshelfCards(){
             </CardHeader>
    {/*Bookshelf body*/}
             {bookshelf.map((item) => (
-              <CardItem2 $color={item.themeColor}>
+              <BSCardItem $color={item.themeColor}>
                     <ImageSection>
                         <img alt={item.imageAlt} src={item.imag}/>
                     </ImageSection>
 
                     <BookDescription>
                         <h5>{item.bookName}</h5>
-                        <p>{item.writerName}</p>
+                        <p style={{ color: "#956fb8" }}>{item.writerName}</p>
                         <p>{item.desc}</p>
-                    </BookDescription>
-                    
-              </CardItem2>    
+                    </BookDescription>    
+              </BSCardItem>    
             ))}
    {/*Bookshelf footer*/}
            <CardFooter>      
@@ -51,20 +48,20 @@ export default function BookshelfCards(){
                 </CardFooterItem>
                 ))}
             </CardFooter>
- {/*Bookshelf picture*/}
-<CardItemPic>
-  <CardItemFooter2>
-    <div>
-      <p>More books exist.</p>
-      <p>My portfolio has boundaries.</p>
-      <p>
-        My <span className="curiosity">curiosity</span> doesn't.
-      </p>
-    </div>
-
-    <img className="bookimage" src={test} alt="" />
-  </CardItemFooter2>
-</CardItemPic>            
+    {/*Bookshelf picture*/}
+    <BookShellFooter>
+      <BSFooterContainer>
+        <div>
+          <p>More books exist.</p>
+          <p>My portfolio has boundaries.</p>
+          <p>
+            My <span className="curiosity">curiosity</span> doesn't.
+          </p>
         </div>
+
+        <img src={AfiaaBook} alt="" />
+      </BSFooterContainer>
+    </BookShellFooter>            
+     </div>
     );
 }

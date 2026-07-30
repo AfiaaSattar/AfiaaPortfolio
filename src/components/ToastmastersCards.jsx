@@ -1,11 +1,13 @@
 import { GiPublicSpeaker, GiCrown } from "react-icons/gi";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineDateRange } from "react-icons/md";
+import styled from "styled-components";
 import {
   CardHeader,
   CardLeftSide,
   CardRightSideToast,
   CardTextBox,
+  CardRightSideToastCompact
 } from "../styled/CardHeader.js";
 import test from "../assets/1.jpg";
 import triple from "../assets/triple.png";
@@ -13,11 +15,9 @@ import { FooterBtn } from "../styled/Footerbtn.js";
 import {clubs, toastPositions} from "../data/toastmasters.js";
 import {CardFooter, CardFooterItem} from "../styled/CardFooter.js";
 import {CardItem, CardContent, TagsContainer, CustomTag} from "../styled/CardItem.js";
-import {RoleDescription, AwardSection, SmallText, MainPosition} from "../styled/Toastmasters.js";
-import styled from "styled-components";
-const Position = styled.h3`
-color: ${({ $color }) => `${$color}`};
-`
+import {RoleDescription, AwardSection, SmallText, MainPosition, Position} from "../styled/Toastmasters.js";
+
+
 export default function ToastmastersCard(){
     return(
         <div className="toastmasters-card">
@@ -30,7 +30,7 @@ export default function ToastmastersCard(){
                         <span className="card-text">4+ Years · 3 Clubs · 5 Roles</span>
                     </CardTextBox>
                 </CardLeftSide>   
-                <CardRightSideToast>
+                <CardRightSideToastCompact>
                     <span className="award">
                         <img src={triple} alt="Triple Crown Award" />
                         <div className="triple-text">
@@ -38,7 +38,7 @@ export default function ToastmastersCard(){
                          <p >A symbol of dedication and leadership</p>
                         </div>
                     </span>
-                </CardRightSideToast>      
+                </CardRightSideToastCompact>      
             </CardHeader>
             {/*Toastmasters-card-body*/}
             <CardFooter>      
@@ -53,7 +53,7 @@ export default function ToastmastersCard(){
             {toastPositions.map((item) => (
         <CardItem 
                  $color={item.themeColor}
-                 style={{ alignItems: "center" }}
+                 style={{ justifyContent: "center"}}
                  >
            {/*1st flex */}  
                  <CardContent key={item.id}>

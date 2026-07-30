@@ -1,21 +1,6 @@
 import styled from "styled-components";
-export const CardItemPic = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 15px;
-  margin-top: 20px;
-  border-radius: 15px;
-  border: 1px solid ${({ $color }) => `${$color}55`};
-  background:
-    radial-gradient(
-      circle at 20% 20%,
-      ${({ $color }) => `${$color}22`} 0%,
-      transparent 60%
-    ),
-  }
-`
-export const CardItem2 = styled.div`
+
+export const BSCardItem = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 4px;
@@ -38,9 +23,11 @@ h5 {
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 2px;
+  margin-top: 2px;
 }
   p {
   margin-top: 2px;
+  margin-bottom: 2px;
   font-size: 0.95rem;
   line-height: 1.7;
   color: #cbd5e1;
@@ -50,25 +37,34 @@ export const ImageSection = styled.div`
 flex: 1;
 img{
   width: 80px;
-   
   height: auto;
   border-radius: 10px;
   filter: drop-shadow(0 8px 12px rgba(121, 128, 181, 0.35));
 `
-export const CardItemFooter2 = styled.div`
+export const BookShellFooter = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   padding: 15px;
+  padding-bottom: 80px;
+  border-radius: 15px;
+ }
+`
+export const BSFooterContainer = styled.div`
+position: relative
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+  
   margin-top: 20px;
   border-radius: 15px;
-  border: 1px solid #06b5d44d;
+  border: 1px solid #a955f741;
 
   background:
     radial-gradient(
       circle at 20% 20%,
-      #06b5d43f,
-      transparent 40%
+      #a955f73a,
+      transparent 60%
     ),
     rgba(15, 23, 42, 0.35);
 
@@ -91,5 +87,12 @@ export const CardItemFooter2 = styled.div`
     text-decoration: underline;
     text-decoration-color: #a855f7;
     text-underline-offset: 5px;
+  }
+img{
+    position: absolute;
+    right: -8px;
+    bottom: 0px;    
+    width: 220px;
+    height: auto;
   }
 `;
