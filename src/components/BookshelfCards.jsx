@@ -6,9 +6,9 @@ import {
   CardTextBox,
 } from "../styled/CardHeader.js";
 import test from "../assets/AfiaaBook.png";
-import { CardContent, TagsContainer, CustomTag} from "../styled/CardItem.js";
+import { CardContent, TagsContainer, CustomTag, CardItem} from "../styled/CardItem.js";
 import { AwardSection, SmallText, MainPosition} from "../styled/Toastmasters.js";
-import {CardItem2, BookDescription, ImageSection} from "../styled/Book.js";
+import {CardItem2, BookDescription, ImageSection, CardItemFooter2, CardItemPic} from "../styled/Book.js";
 import { bookshelf, progress} from "../data/bookshelf.js";
 import { CardFooter, CardFooterItem } from "../styled/CardFooter.js";
 <link
@@ -52,14 +52,19 @@ export default function BookshelfCards(){
                 ))}
             </CardFooter>
  {/*Bookshelf picture*/}
-            <CardItem2>
-              <div >
-                <p>More books exist.</p>
-                <p>My portfolio has boundaries.</p>
-                <p> My <span className="curiosity">curiosity</span> doesn't.</p>
-              </div>    
-                 <img  className="test" src={test}/>  
-              </CardItem2> 
+<CardItemPic>
+  <CardItemFooter2>
+    <div>
+      <p>More books exist.</p>
+      <p>My portfolio has boundaries.</p>
+      <p>
+        My <span className="curiosity">curiosity</span> doesn't.
+      </p>
+    </div>
+
+    <img className="bookimage" src={test} alt="" />
+  </CardItemFooter2>
+</CardItemPic>            
         </div>
     );
 }

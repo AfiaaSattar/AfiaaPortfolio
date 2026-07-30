@@ -21,7 +21,8 @@ export default function ContactCards() {
 
   return (
     <div className="contact-cards">
-      {/* Header Section */}
+      <div className="Card-container">
+           {/* Header Section */}
       <div className="card-header">
         <h2>
           <HiSparkles className="sparkle-icon" /> Let's Work Together
@@ -97,6 +98,8 @@ export default function ContactCards() {
         <FiMessageCircle />
         <span className="online-dot"></span>
       </div>
+      </div>
+   
     </div>
   );
 }

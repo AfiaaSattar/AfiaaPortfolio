@@ -569,11 +569,6 @@ box-shadow: 0 0 15px #a9c61a, 0 0 10px #a9c61a;
   ),
   #033f301a;
 }
-.test{
-  width: 300px;
-  height: 200px;
-align-items: center;
-}
 .toast-position-container p{
   color: #64748b;
   margin-bottom: 7px;
@@ -610,20 +605,26 @@ background-color: #1ac66d2a;
   align-items: center;
   justify-content: center;
 }
+.bookimage {
+  position: absolute;
+  right: -10px;
+  bottom: -30px;    
+  width: 220px;
+  height: auto;
+}
 /*contact Card*/
 /*contact-header*/
 .contact-cards{
-position: relative;
-  background-color: #080d21;
-  border: 1px solid #1a2342;
   border-radius: 20px;
-  padding: 40px;
-  max-width: 820px; /* Wide card layout */
-  margin: 0 auto;
   font-family: system-ui, -apple-system, sans-serif;
   color: #ffffff;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
+}
+.Card-container{
+  padding: 30px;
+  max-width: 820px; /* Wide card layout */
+  margin: 0 auto;
 }
 /* Header Styling */
 .card-header {
