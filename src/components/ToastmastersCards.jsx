@@ -17,7 +17,6 @@ import {CardFooter, CardFooterItem} from "../styled/CardFooter.js";
 import {CardItem, CardContent, TagsContainer, CustomTag} from "../styled/CardItem.js";
 import {RoleDescription, AwardSection, SmallText, MainPosition, Position} from "../styled/Toastmasters.js";
 
-
 export default function ToastmastersCard(){
     return(
         <div className="toastmasters-card">

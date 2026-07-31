@@ -18,6 +18,9 @@ const SkillTag = styled.div`
   border-radius: 20px;
   position: relative;
 
+  @media (max-width: 640px) {
+  margin: 5px;
+  }
   ${(props) =>
     props.$isHot &&`
     background: rgba(6, 182, 212, 0.05);
@@ -67,6 +70,9 @@ const SocialButton = styled.a`
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.2s ease;
 
+  @media (max-width: 640px) {
+  
+  }
   ${props => {
     let mainColor = '#c084fc';
 
@@ -118,7 +124,7 @@ export default function ProfileCard() {
         </CardContent>
       </div>
 {/* Skills Section */}
-      <div>
+      <div style={{marginTop: "7px"}}>
         {SKILLS_DATA.map(({ id, name, isHot }) => (
           <SkillTag key={id} $isHot={isHot}>
             {name}
@@ -126,7 +132,7 @@ export default function ProfileCard() {
         ))}
       </div>
 {/* Social Links Section */}      
-      <div>
+      <div style={{marginTop: "7px"}}>
         {SOCIAL_DATA.map(({ id, name, url, icon: Icon, type }) => (
           <SocialButton key={id} href={url} $type={type}>
             <Icon />
