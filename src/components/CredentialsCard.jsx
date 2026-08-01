@@ -1,5 +1,5 @@
 import { FiAward } from "react-icons/fi";
-import toefl from "../assets/toefl.PNG";
+import toefl from "../assets/toefl.png";
 import {
   CardHeader,
   CardLeftSide,
