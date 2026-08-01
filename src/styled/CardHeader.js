@@ -4,6 +4,14 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+ @media (max-width: 640px) {
+   .card-title{
+     font-size: 15px;
+    }
+    .card-text{
+     font-size: 10px;
+    }
+ }
     `
     export const CardLeftSide = styled.div`
         display: flex;
@@ -24,7 +32,10 @@
     img{
         width: 50px;
         height: 50px;
-  }
+  };
+   @media (max-width: 640px) {
+     font-size: 10px;
+ }
        ` 
  export const CardRightSideToast = styled.div`
     display: flex;

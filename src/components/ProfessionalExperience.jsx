@@ -28,27 +28,27 @@ export default function ProfessionalExperience(){
                 </CardRightSide>      
             </CardHeader>
              {/*job containers --1--*/}
-            <div className="A">
+            <div className="comanyImg">
                 <img className="icon" src={zain} alt="Zain Iraq" />
                 <h4>Zain Iraq</h4>
             </div> 
-            <div style={{margin: "0px 50px"}}>
+            <div className="componyPositions">
                 {zainPositions.map((item) => (
                     <CardItem key={item.id} $color={item.themeColor}>
-                          <item.icon className="jobsIcon"  style={{ color: `${item.themeColor}90` }}/>
+                       <item.icon className="jobsIcon"  style={{ color: `${item.themeColor}90` }}/>
                       <div>
                         <span>{item.title}</span>
                         <div>{item.date}</div>
                       </div> 
                     </CardItem>
                 ))}   
-                </div> 
+             </div> 
               {/*job containers --2--*/}    
-            <div className="A">
+            <div className="comanyImg">
                 <img className="icon" src={IP} alt="Zain Iraq" />
                 <h4>INTEGRATED PATH</h4>
             </div> 
-             <div style={{margin: "0px 50px"}}>
+             <div className="componyPositions">
                {IPPositions.map((item) => (
                     <CardItem key={item.id} $color={item.themeColor}>
                          <item.icon className="jobsIcon" style={{ color: `${item.themeColor}90` }}/>
