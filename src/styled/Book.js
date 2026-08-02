@@ -95,4 +95,8 @@ img{
     width: 220px;
     height: auto;
   }
+  @media (max-width: 640px) {
+    img{
+      position: static;
+}
 `;
