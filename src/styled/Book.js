@@ -90,7 +90,8 @@ export const BSFooterContainer = styled.div`
   }
 img{
     position: absolute;
-    right: -8px;
+    right: -60px;
+    bottom: -100px;
     width: 220px;
     height: auto;
   }
