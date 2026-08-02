@@ -447,6 +447,12 @@ box-shadow: 0 0 5px #1ac66d, 0 0 10px #1ac66d;
     transform:translateX(4px);
     cursor: pointer;
 }
+
+@media (max-width: 640px) {
+  .articles-body-footer {
+    font-size: 13px;
+ }
+}
 /*TechnicalTimelineCards Card*/
 /*TechnicalTimelineCards-header*/
 .technical-card{
@@ -527,6 +533,7 @@ background:
 }
 .componyPositions{
  margin: 0px 50px;
+ font-size: 14px;
 }
  @media (max-width: 640px) {
   div .componyPositions{
