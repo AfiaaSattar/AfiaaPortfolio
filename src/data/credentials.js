@@ -1,4 +1,4 @@
-import toefl from "../assets/toefl.PNG";
+import toefl from "../assets/toefl.png";
 import meta from "../assets/meta.webp";
 import google from "../assets/google.webp";
 import toast from "../assets/toast.png";
