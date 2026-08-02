@@ -5,6 +5,8 @@
         align-items: center;
         width: 100%;
  @media (max-width: 640px) {
+    flex-wrap: ${({ $wrapOnMobile }) =>
+    $wrapOnMobile ? "wrap" : "nowrap"};
    .card-title{
      font-size: 15px;
     }
@@ -59,8 +61,11 @@
         height: 60px;
 }
   @media (max-width: 640px) {
-    padding: 0px;
-    margin: 0px; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: -10px;
   .award{
     padding: 0px;
     margin: 0px; 

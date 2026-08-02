@@ -21,7 +21,7 @@ export default function ToastmastersCard(){
     return(
         <div className="toastmasters-card">
          {/*Toastmasters-card-header*/}
-            <CardHeader>
+            <CardHeader $wrapOnMobile>
                 <CardLeftSide>
                     <GiPublicSpeaker className="headerTag" />
                     <CardTextBox>
