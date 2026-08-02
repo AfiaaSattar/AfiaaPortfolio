@@ -51,7 +51,7 @@ export const BookShellFooter = styled.div`
  }
 `
 export const BSFooterContainer = styled.div`
-position: relative
+  position: relative;
   flex-wrap: wrap;
   gap: 10px;
   padding: 15px;
@@ -91,7 +91,6 @@ position: relative
 img{
     position: absolute;
     right: -8px;
-    bottom: 0px;    
     width: 220px;
     height: auto;
   }
