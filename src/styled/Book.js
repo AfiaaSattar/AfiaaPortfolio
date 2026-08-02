@@ -97,6 +97,10 @@ img{
   }
   @media (max-width: 640px) {
     img{
-      position: static;
+        position: static;
+        display: block;
+        margin: 20px auto 0;
+        width: 180px;
+        height: auto;
 }
 `;
