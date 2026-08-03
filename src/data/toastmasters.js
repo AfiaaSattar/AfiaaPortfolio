@@ -5,7 +5,13 @@ import {
   FaClipboardList,
   FaChalkboardTeacher,
 } from "react-icons/fa";
-import test from "../assets/triple.png";
+import img1 from "../assets/toastmasters/1.jpg";
+import img2 from "../assets/toastmasters/8.jpg";
+import img3 from "../assets/toastmasters/11.jpg";
+import img4 from "../assets/toastmasters/10.jpg";
+import img5 from "../assets/toastmasters/5.jpg";
+import img6 from "../assets/toastmasters/4.jpg";
+ 
 export const clubs = [
     {
         id:1,
@@ -28,7 +34,7 @@ export const toastPositions = [
     position: "Secretary",
     icon: FaClipboardList,
     themeColor: "#22c55e",
-    image: test,
+    image: img1,
     imageAlt: "Secretary at Baghdad Toastmasters Club",
     fullDate: "Sep 2021 – May 2022",
     tags: [
@@ -48,7 +54,7 @@ export const toastPositions = [
     position: "Vice President of Education",
     icon: FaChalkboardTeacher,
     themeColor: "#8b5cf6",
-    image: "/images/toastmasters/vpe-btc-2022.jpg",
+    image: img2,
     imageAlt: "Vice President of Education at Baghdad TM Club",
     fullDate: "May 2022 – May 2023",
     tags: [
@@ -69,7 +75,7 @@ export const toastPositions = [
     position: "Member",
     icon: FaUser,
     themeColor: "#06b6d4",
-    image: "/images/toastmasters/member-tltm.jpg",
+    image: img3,
     imageAlt: "Member of Tigris League TM Club",
     fullDate: "Aug 2023 – Present",
     tags: [
@@ -89,7 +95,7 @@ export const toastPositions = [
     position: "Member",
     icon: FaUser,
     themeColor: "#47a757",
-    image: "/images/toastmasters/member-baghdad-2025.jpg",
+    image: img4,
     imageAlt: "Member at Baghdad Toastmasters",
     fullDate: "Mar 2025 – Oct 2025",
     tags: [
@@ -109,7 +115,7 @@ export const toastPositions = [
     position: "Vice President of Education",
     icon: FaChalkboardTeacher,
     themeColor: "#3b82f6",
-    image: "/images/toastmasters/vpe-tltm.jpg",
+    image: img5,
     imageAlt: "Vice President of Education at Tigris League TM Club",
     fullDate: "Jun 2025 – Jun 2026",
     tags: [
@@ -130,7 +136,7 @@ export const toastPositions = [
     position: "President",
     icon: FaCrown,
     themeColor: "#facc15",
-    image: "/images/toastmasters/president-tltm.jpg",
+    image: img6,
     imageAlt: "President of Tigris League TM Club",
     fullDate: "Jun 2026 – Present",
     tags: [

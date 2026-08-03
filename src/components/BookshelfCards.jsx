@@ -59,7 +59,7 @@ export default function BookshelfCards(){
           </p>
         </div>
 
-        <img src={AfiaaBook} alt="" />
+        <img src={AfiaaBook} alt="Afiaa's Book" />
       </BSFooterContainer>
     </BookShellFooter>            
      </div>

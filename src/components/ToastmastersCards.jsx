@@ -9,7 +9,6 @@ import {
   CardTextBox,
   CardRightSideToastCompact
 } from "../styled/CardHeader.js";
-import test from "../assets/1.jpg";
 import triple from "../assets/triple.png";
 import { FooterBtn } from "../styled/Footerbtn.js";
 import {clubs, toastPositions} from "../data/toastmasters.js";
@@ -88,7 +87,9 @@ export default function ToastmastersCard(){
                    </RoleDescription>
                {/*3rd flex */}     
                    <AwardSection>
-                     <img alt={item.imageAlt} src={test}/>
+                
+                           <img alt={item.imageAlt} src={item.image}/>
+              
                    </AwardSection>
           </CardItem>
                 ))}
