@@ -25,7 +25,7 @@ export default function ToastmastersCard(){
                     <GiPublicSpeaker className="headerTag" />
                     <CardTextBox>
                         <h3 className="card-title">Toastmasters Library</h3>
-                        <span className="card-text">4+ Years · 3 Clubs · 5 Roles</span>
+                        <span className="card-text">5+ Years · 2 Clubs · 3 Roles</span>
                     </CardTextBox>
                 </CardLeftSide>   
                 <CardRightSideToastCompact>

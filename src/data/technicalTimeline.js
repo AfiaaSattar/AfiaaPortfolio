@@ -9,7 +9,7 @@ export const technicalExperience = [
         title: " IT Technical Assistant",
         situation: "CURRENT",
         workPlace: "University of Technology",
-        date: "2022 – Present",
+        date: "Sep 2024 – Present",
         description: "Providing support to faculty and administrative staff, troubleshooting computer-related issues, managing digital documents and data, creating reports and spreadsheets, and assisting with day-to-day technology needs across departments.",
         tags: [
             "Technical Support",
@@ -42,7 +42,7 @@ export const technicalExperience = [
         title: " Frontend Developer",
         situation: "SELF-TAUGHT",
         workPlace: "Independent — this portfolio is proof",
-        date: "2022 – Present",
+        date: "Oct 2025 – Present",
         description: "Self-taught React, JavaScript, CSS and modern tooling. Built this entire portfolio from scratch as a live demonstration of those skills.",
         tags: ["React", "JavaScript", "CSS/HTML"],
         themeColor: "#C084FC"

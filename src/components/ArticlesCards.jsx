@@ -25,7 +25,7 @@ export default function ArticlesCards(){
                     </CardTextBox>
                 </CardLeftSide>   
                 <CardRightSide>
-                    <span>43 posts</span>
+                    <span>8 Articles</span>
                 </CardRightSide>      
             </CardHeader>
         {/*articles-body*/}    
