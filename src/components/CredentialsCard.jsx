@@ -9,6 +9,7 @@ import {
 import { certificate } from "../data/credentials.js";
 import { CardFooter, CardFooterItem} from "../styled/CardFooter.js";
 import { FooterBtn } from "../styled/Footerbtn.js";
+import { Link } from "react-router-dom";
 export default function CredentialsCards(){
     return(
         <div className="credentials-cards">
@@ -51,9 +52,11 @@ export default function CredentialsCards(){
     </CardFooter>    
   </div>  
 {/*View All Credentials*/}
+<Link to="/credentials" className="view-all-credentials">
     <FooterBtn>
             <button>Browse All Credentials </button>
     </FooterBtn>
+</Link>
 </div>
     );
 }
