@@ -54,6 +54,7 @@ return (
         </div>     
       </div>
 {/* Credentials Cards */}
+{/* Credentials Cards */}
      <p>Showing 42 of 42 credentials</p>
             
     <div className="credentials-search-cards"> 
