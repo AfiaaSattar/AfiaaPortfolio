@@ -24,6 +24,16 @@ export default function CredentialsPage() {
         certificate.category === selectedCategory;
         return matchSearch && matchCategory;
 });
+
+let len = certificates.length;
+
+for (let i =0; i < certificates.length; i++) {
+    if (certificates[i].category == categories[i]) {
+        let res = 0;
+        res += 1;
+    }
+        return res;
+}
    
 {/* Render the component */}
 return (
@@ -36,7 +46,7 @@ return (
       </Link> 
       <p className="credentials-registry">Credentials Registry</p>
       <h1> All Credentials</h1>
-      <p>42 certifications & awards across Web Development, Leadership, and Tech Support</p>
+      <p className="credentials-description"><span>{len}</span> certifications & awards across Web Development, Leadership, and Tech Support</p>
 
 {/* Search and Categories */}
       <div className="credentials-search">
@@ -48,13 +58,13 @@ return (
                 key={category}
                 className={`credentials-category ${selectedCategory === category ? "active" : ""}`}
                 >
-                  {category}
+                  {category} {res}
                 </button>
             ))}
         </div>     
       </div>
 {/* Credentials Cards */}
-     <p>Showing 42 of 42 credentials</p>
+     <p>Showing 42 of {len} credentials</p>
             
     <div className="credentials-search-cards"> 
         {filteredCertificates.map((certificate) => (
