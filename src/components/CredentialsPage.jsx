@@ -26,15 +26,7 @@ export default function CredentialsPage() {
 });
 
 let len = certificates.length;
-
-for (let i =0; i < certificates.length; i++) {
-    if (certificates[i].category == categories[i]) {
-        let res = 0;
-        res += 1;
-    }
-        return res;
-}
-   
+       
 {/* Render the component */}
 return (
     <div style={{ padding: "50px" }}>
@@ -51,20 +43,36 @@ return (
 {/* Search and Categories */}
       <div className="credentials-search">
         <input onChange={handleSearchChange} value={searchTerm} className="credentials-search-input" type="text" placeholder="Search Credentials" />
-       
+
+       {/* the list of categories wiht the conters on each one */}
         <div className="credentials-categories">
-            {categories.map((category) => (
-                <button onClick={() => setSelectedCategory(category)}
-                key={category}
-                className={`credentials-category ${selectedCategory === category ? "active" : ""}`}
-                >
-                  {category} {res}
-                </button>
-            ))}
+            {categories.map((category) => {
+                let res = 0;
+                if (category === "All") {
+                    res = certificates.length;
+                } else {
+                    for (let i = 0; i < certificates.length; i++) {
+                        if (certificates[i].category === category) {
+                            res++;
+                        }
+                    }
+                }
+                return (
+                    <button onClick={() => setSelectedCategory(category)}
+                    key={category}
+                    className={`credentials-category ${selectedCategory === category ? "active" : ""}`}
+                    >
+                    {category} <span className="credentials-count">{res}</span>
+                    </button>
+                )
+            })}
         </div>     
       </div>
 {/* Credentials Cards */}
-     <p>Showing 42 of {len} credentials</p>
+
+    <p>  
+      Showing {filteredCertificates.length} of {len} credentials
+    </p>
             
     <div className="credentials-search-cards"> 
         {filteredCertificates.map((certificate) => (
