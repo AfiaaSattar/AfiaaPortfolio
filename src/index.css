@@ -264,6 +264,10 @@ box-shadow: 0 0 5px #1ac66d, 0 0 10px #1ac66d;
   align-items: center;
   justify-content: center;
 }
+.view-all-credentials {
+  text-decoration: none;
+  color: inherit;
+}
 /*Featured Certificate*/
 .Featured-Certificate-container{
     margin: 30px 0 5px;
